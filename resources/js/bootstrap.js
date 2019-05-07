@@ -1,3 +1,21 @@
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+//import Vuex from 'vuex';
+
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import VeeValidate from 'vee-validate'
+//import VueAuth from '@websanova/vue-auth'
+
+/* Setup Vue with plugins */
+window.Vue = Vue;
+
+Vue.use(VueRouter); //manages routing
+//Vue.use(Vuex);
+Vue.use(VueAxios, axios);
+
+Vue.use(VeeValidate);
+
 
 window._ = require('lodash');
 
@@ -54,3 +72,6 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+
+axios.defaults.baseURL = '/api/';
