@@ -43,7 +43,12 @@
 
         <div class="navbar-collapse collapse" id="navbar-second-toggle">
             <ul class="nav navbar-nav navbar-nav-material">
-                <li class="active"><a href="javascript:void(0)"><i class="icon-display4 position-left"></i> Dashboard</a></li>
+                <router-link tag="li" to="/dashboard">
+                    <a><i class="icon-display4 position-left"></i> Dashboard</a>
+                </router-link>
+                <router-link tag="li" to="/documents/create">
+                    <a><i class="icon-display4 position-left"></i> Documents</a>
+                </router-link>
             </ul>
 
             <ul class="nav navbar-nav navbar-nav-material navbar-right">
