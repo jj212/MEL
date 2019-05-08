@@ -29,6 +29,7 @@
                                 <div class="panel-body">
                                     <Approach v-if="currentTab == 1" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Approach>
                                     <Approach-Principles v-if="currentTab == 2" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Approach-Principles>
+                                    <Complete v-if="currentTab == 3 && generatedDoc" :document="generatedDoc"></Complete>
                                 </div>
                             </div>
                             <!-- /marketing campaigns -->
@@ -54,13 +55,15 @@
     import ProgressBar from '../partials/ProgressBar.vue'
     import Approach from './Forms/Approach.vue'
     import ApproachPrinciples from './Forms/ApproachPrinciples.vue'
+    import Complete from './Forms/Complete.vue'
 
     export default {
         name: 'DocumentCreate',
         components: {
             ProgressBar,
             Approach,
-            ApproachPrinciples
+            ApproachPrinciples,
+            Complete
         },
         data () {
             return {
@@ -70,6 +73,7 @@
                         principles: ''
                     },
                 },
+                generatedDoc:{},
                 currentTab:1,
                 serverErrors: [],
                 showDismissibleAlert: false,
@@ -80,8 +84,24 @@
                 this.document = event;
             },
             handleCurrentTab (event) {
-                console.log(event);
                 this.currentTab = event;
+                if(this.currentTab == 3) {
+                    this.generateDocument();
+                }
+            },
+            generateDocument() {
+                this.axios.post('documents', this.document)
+                        .then(res => {
+                    console.log(res);
+                    this.generatedDoc = res.data.document;
+//                    this.$swal(res.data.msg);
+                    this.document = {approach: {}};
+//                    this.$router.push('/login')
+                }).catch(err => {
+                    this.showDismissibleAlert = true;
+                    this.serverErrors = [];
+                    this.serverErrors.push(err.response.data.msg);
+                })
             }
         }
     }

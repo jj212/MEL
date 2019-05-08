@@ -25,6 +25,9 @@ Route::group(['middleware' => 'api', 'namespace'=>'Api'], function ($router) {
         Route::get('me', 'Auth\AuthController@me');
         Route::post('logout', 'Auth\AuthController@logout');
         Route::get('refresh', 'Auth\AuthController@refresh');
+
+
+        Route::post('documents', 'DocumentsController@store');
     });
 
 });
