@@ -17,13 +17,13 @@
                                     <h5 class="content-group">Login <small class="display-block">Enter your credentials below</small></h5>
                                 </div>
 
-                                <!--<div v-if="serverErrors.length">
+                                <div v-if="serverErrors.length">
                                     <b-alert v-model="showDismissibleAlert" variant="danger" dismissible>
                                         <ul>
                                             <li v-for="err in serverErrors">{{err}}</li>
                                         </ul>
                                     </b-alert>
-                                </div>-->
+                                </div>
 
 
                                 <div class="form-group has-feedback has-feedback-left">
@@ -31,7 +31,7 @@
                                     <div class="form-control-feedback">
                                         <i class="icon-user text-muted"></i>
                                     </div>
-                                    <!--<span v-if="errors.has('email')" class="text-danger">{{ errors.first('email') }}</span>-->
+                                    <span v-if="errors.has('email')" class="text-danger">{{ errors.first('email') }}</span>
                                 </div>
 
                                 <div class="form-group has-feedback has-feedback-left">
@@ -39,7 +39,7 @@
                                     <div class="form-control-feedback">
                                         <i class="icon-lock2 text-muted"></i>
                                     </div>
-                                    <!--<span v-if="errors.has('password')" class="text-danger">{{ errors.first('password') }}</span>-->
+                                    <span v-if="errors.has('password')" class="text-danger">{{ errors.first('password') }}</span>
                                 </div>
 
                                 <div class="form-group">
@@ -77,8 +77,62 @@
                 showDismissibleAlert: false,
             }
         },
-        mounted() {
-            console.log('Login Component mounted.')
+        methods: {
+            login() {
+
+                this.$validator.validateAll().
+                        then((result) => {
+                    if(result) {
+                        this.$auth.login({
+                            params: {
+                                email: this.user.email,
+                                password: this.user.password
+                            },
+                            success: function(res) {
+                                this.user = {};
+                            },
+                            error: function(err) {
+                                this.showDismissibleAlert = true;
+                                this.serverErrors = [];
+                                if (err.response.data.error === 'Unauthorized') {
+                                    this.serverErrors.push(err.response.data.msg);
+                                } else {
+                                    this.handleErrors(err.response.data.errors);
+                                }
+
+                            },
+                            rememberMe: true,
+                            fetchUser: true,
+                            redirect: '/dashboard'
+                        })
+                    }
+                });
+
+            },
+
+            handleErrors(Errs) {
+                const newErr = [];
+                _.forEach(Errs, function(value, key) {
+                    newErr.push(Errs[key][0]);
+                });
+                this.serverErrors = newErr;
+            }
+        },
+        created () {
+            if(this.$auth.check()) {
+                this.$router.push('/dashboard');
+             }
         }
     }
 </script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    .alert button.close {
+        margin-right: 5px !important;
+    }
+    .alert ul {
+        padding: 0;
+        list-style-type: none;
+    }
+</style>

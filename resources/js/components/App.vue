@@ -1,6 +1,6 @@
 <template>
     <div>
-        <!--<Header></Header>-->
+        <Header v-if="$auth.check()"></Header>
         <main>
             <router-view></router-view>
         </main>
@@ -25,9 +25,5 @@
 </script>
 
 <style>
-    @import '/assets/css/icons/icomoon/styles.css';
-    @import '/assets/css/bootstrap.css';
-    @import '/assets/css/core.css';
-    @import '/assets/css/components.css';
-    @import '/assets/css/colors.css';
+
 </style>

@@ -5,7 +5,12 @@ import VueRouter from 'vue-router';
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VeeValidate from 'vee-validate'
+import BootstrapVue from 'bootstrap-vue'
+
 //import VueAuth from '@websanova/vue-auth'
+
+
+//console.log(auth,'====Auth');
 
 /* Setup Vue with plugins */
 window.Vue = Vue;
@@ -15,6 +20,9 @@ Vue.use(VueRouter); //manages routing
 Vue.use(VueAxios, axios);
 
 Vue.use(VeeValidate);
+Vue.use(BootstrapVue);
+
+
 
 
 window._ = require('lodash');

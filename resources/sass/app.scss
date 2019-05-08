@@ -1,14 +1,20 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+//@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-@import 'variables';
+//@import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+//@import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
+//@import 'node_modules/bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900');
+@import '/assets/css/icons/icomoon/styles.css';
+@import '/assets/css/bootstrap.css';
+@import '/assets/css/core.css';
+@import '/assets/css/components.css';
+@import '/assets/css/colors.css';
+
+//@import 'node_modules/bootstrap-vue/src/index.scss';

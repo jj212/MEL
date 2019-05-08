@@ -6,7 +6,13 @@
  */
 
 require('./bootstrap');
+
+import VueAuth from '@websanova/vue-auth'
 import router from './routes';
+
+import auth from './guards/auth'
+
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 window.Vue = require('vue');
 
@@ -24,7 +30,10 @@ window.Vue = require('vue');
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('app', require('./components/App.vue').default);
 
+
 Vue.router = router;
+
+Vue.use(VueAuth, auth);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -1,6 +1,7 @@
 import VueRouter from 'vue-router';
 
 import Login from './components/Login';
+import Dashboard from './components/Dashboard';
 
 
 let routes = [
@@ -11,6 +12,12 @@ let routes = [
         path: '/login',
         name: 'login',
         component: Login
+    }
+    , {
+        path: '/dashboard',
+        name: 'dashboard',
+        component: Dashboard,
+        meta: {auth: true}
     }
 
 ];
