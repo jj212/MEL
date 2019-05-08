@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Document;
+use HTMLtoOpenXML\Parser;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use PhpOffice\PhpWord\TemplateProcessor;
@@ -29,6 +30,9 @@ class DocumentsController extends Controller
     public function generateDocument($data)
     {
         $template = new TemplateProcessor(public_path().'/templates/Final_M_AND_E_Framework-YFBP.docx');
+//        $parser = new Parser();
+//        $ooXml = $parser->fromHTML($data['approach']['approach']);
+        
         $template->setValue('approach', $data['approach']['approach']);
         $template->setValue('approach_principles', $data['approach']['principles']);
 

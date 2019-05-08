@@ -3,7 +3,10 @@
         <form class="form-horizontal" @submit.prevent="approachForm">
             <div class="form-group has-feedback has-feedback-left">
                 <label for="approach">Approach</label>
-                <textarea name="approach" v-model="document.approach.approach" class="form-control" v-validate="'required|min:10'" placeholder="Approach text here ..." id="approach"></textarea>
+
+                <ckeditor name="approach" :editor="editor" v-model="document.approach.approach" :config="editorConfig" v-validate="'required|min:10'" placeholder="Approach text here ..." id="approach"></ckeditor>
+
+                <!--<textarea name="approach" v-model="document.approach.approach" class="form-control" v-validate="'required|min:10'" placeholder="Approach text here ..." id="approach"></textarea>-->
                 <span v-if="errors.has('approach')" class="text-danger">{{ errors.first('approach') }}</span>
             </div>
 
@@ -15,6 +18,8 @@
 </template>
 
 <script>
+
+    import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
     export default {
         name: 'Approach',
@@ -31,6 +36,11 @@
         },
         data () {
             return {
+                editor: ClassicEditor,
+//                editorData: '<p>Content of the editor.</p>',
+                editorConfig: {
+                    // The configuration of the editor.
+                },
                 tabNo: this.currentTab,
             }
         },

@@ -6,6 +6,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VeeValidate from 'vee-validate'
 import BootstrapVue from 'bootstrap-vue'
+import CKEditor from '@ckeditor/ckeditor5-vue';
 
 //import VueAuth from '@websanova/vue-auth'
 
@@ -21,6 +22,7 @@ Vue.use(VueAxios, axios);
 
 Vue.use(VeeValidate);
 Vue.use(BootstrapVue);
+Vue.use( CKEditor );
 
 
 
