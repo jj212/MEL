@@ -1,5 +1,5 @@
 <template>
-    <div class="col-md-12 page ab-test">
+    <div class="col-md-9 page ab-test">
         <div class="section-progress-block">
             <div class="container">
                 <div class="progress-block">

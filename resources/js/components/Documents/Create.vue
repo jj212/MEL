@@ -19,7 +19,7 @@
                     <!-- Dashboard content -->
                     <div class="row">
 
-                        <div class="col-lg-12">
+                        <div class="col-lg-9">
 
                             <!-- Marketing campaigns -->
                             <div class="panel panel-flat">
@@ -69,7 +69,9 @@
             return {
                 document: {
                     approach: {
-                        approach: '',
+                        title: '',
+                        levels: [{text:''}],
+                        description: '',
                         principles: ''
                     },
                 },
