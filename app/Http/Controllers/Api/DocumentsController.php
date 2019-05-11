@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\Document;
 
+use Dompdf\Dompdf;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use PhpOffice\PhpWord\TemplateProcessor;
@@ -12,7 +13,7 @@ class DocumentsController extends Controller
 {
     public function store(Request $request)
     {
-        $this->convertToDocx();
+        $this->generatePdf();
         die();
         $document = new Document();
         $document->user_id = auth()->id();
@@ -78,4 +79,16 @@ class DocumentsController extends Controller
         /* [SAVE FILE ON THE SERVER] */
         $pw->save(public_path().'/exports/'."html-to-doc.docx", "Word2007");
     }
+
+    public function generatePdf()
+    {
+        $html = file_get_contents(public_path().'/templates/test.html');
+
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($html);
+        $dompdf->render();
+        $output = $dompdf->output();
+        file_put_contents(public_path().'/exports/'.'Brochure.pdf', $output);
+    }
+
 }
