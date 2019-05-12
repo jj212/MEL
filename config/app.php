@@ -176,7 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
 //        App\Providers\MyServiceProvider::class,
-        RobbieP\CloudConvertLaravel\CloudConvertLaravelServiceProvider::class,
+//        RobbieP\CloudConvertLaravel\CloudConvertLaravelServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
 
     ],
