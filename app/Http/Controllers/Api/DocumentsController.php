@@ -4,22 +4,24 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\Document;
 
+use Barryvdh\DomPDF\PDF;
 use Dompdf\Dompdf;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use PhpOffice\PhpWord\TemplateProcessor;
+use RobbieP\CloudConvertLaravel\Facades\CloudConvert;
 
 class DocumentsController extends Controller
 {
     public function store(Request $request)
     {
-        $this->generatePdf();
-        die();
+//        $html = $this->generatePdf();
+//        die();
         $document = new Document();
         $document->user_id = auth()->id();
-        $document->approach = $request->approach['title'];
+        $document->approach = $request->approach['approach'];
         $document->approach_principles = $request->approach['principles'];
-        $document->path = $this->generateDocument($request->all());
+        $document->path = $this->generatePdf($request->all());
 
         if(!$document->save()){
             return response()->json([ 'msg'=>'Document saving failed'], 400);
@@ -80,15 +82,26 @@ class DocumentsController extends Controller
         $pw->save(public_path().'/exports/'."html-to-doc.docx", "Word2007");
     }
 
-    public function generatePdf()
+    public function generatePdf($data)
     {
-        $html = file_get_contents(public_path().'/templates/test.html');
+
+//        CloudConvert::file(public_path().'/exports/'.'test.pdf')->to(public_path().'/exports/'.'test00.docx');
+//        dd('hello');
+
+
+        $html = file_get_contents(public_path().'/templates/testhtml.html');
+        $html = str_replace('##{approach_text}##',$data['approach']['approach'],$html);
+        $html = str_replace('##{approach_principles}##',$data['approach']['principles'],$html);
+
+        $path = 'exports/'.time().'_Final_M_AND_E_Framework-YFBP.pdf';
 
         $dompdf = new Dompdf();
         $dompdf->loadHtml($html);
         $dompdf->render();
-        $output = $dompdf->output();
-        file_put_contents(public_path().'/exports/'.'Brochure.pdf', $output);
+        $output = $dompdf->output(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true]);
+        file_put_contents(public_path().'/'.$path, $output);
+
+        return $path;
     }
 
 }

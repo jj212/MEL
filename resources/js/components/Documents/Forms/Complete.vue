@@ -1,6 +1,6 @@
 <template>
-    <div class="col-md-7">
-        <table class="table table-bordered">
+    <div class="col-md-8">
+        <table class="table table-bordered" v-cloak>
             <thead>
                 <tr>
                     <th>Document</th>

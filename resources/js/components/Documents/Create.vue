@@ -69,9 +69,7 @@
             return {
                 document: {
                     approach: {
-                        title: '',
-                        levels: [{text:''}],
-                        description: '',
+                        approach: '',
                         principles: ''
                     },
                 },
@@ -98,7 +96,7 @@
                     this.generatedDoc = res.data.document;
 //                    this.$swal(res.data.msg);
                     this.document = {approach: {}};
-//                    this.$router.push('/login')
+
                 }).catch(err => {
                     this.showDismissibleAlert = true;
                     this.serverErrors = [];
