@@ -29,7 +29,10 @@
                                 <div class="panel-body">
                                     <Approach v-if="currentTab == 1" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Approach>
                                     <Approach-Principles v-if="currentTab == 2" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Approach-Principles>
-                                    <Complete v-if="currentTab == 3 && generatedDoc" :document="generatedDoc"></Complete>
+                                    <Scope-Audience v-if="currentTab == 3" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Scope-Audience>
+                                    <Ethical-Consideration v-if="currentTab == 4" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Ethical-Consideration>
+                                    <Limitations v-if="currentTab == 5" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Limitations>
+                                    <Complete v-if="currentTab == 6 && generatedDoc" :document="generatedDoc"></Complete>
                                 </div>
                             </div>
                             <!-- /marketing campaigns -->
@@ -55,6 +58,9 @@
     import ProgressBar from '../partials/ProgressBar.vue'
     import Approach from './Forms/Approach.vue'
     import ApproachPrinciples from './Forms/ApproachPrinciples.vue'
+    import ScopeAudience from './Forms/ScopeAudience.vue'
+    import EthicalConsideration from './Forms/EthicalConsideration.vue'
+    import Limitations from './Forms/Limitations.vue'
     import Complete from './Forms/Complete.vue'
 
     export default {
@@ -63,6 +69,9 @@
             ProgressBar,
             Approach,
             ApproachPrinciples,
+            ScopeAudience,
+            EthicalConsideration,
+            Limitations,
             Complete
         },
         data () {
@@ -70,7 +79,15 @@
                 document: {
                     approach: {
                         approach: '',
-                        principles: ''
+                        principles: '',
+                        scope_audience: '',
+                        scope_audience_tbl: [{
+                            name: '',
+                            data: [
+                                {stakeholder:'', need:''}
+                            ]
+                        }],
+                        ethical_considerations: ''
                     },
                 },
                 generatedDoc:{},
@@ -85,7 +102,7 @@
             },
             handleCurrentTab (event) {
                 this.currentTab = event;
-                if(this.currentTab == 3) {
+                if(this.currentTab == 6) {
                     this.generateDocument();
                 }
             },

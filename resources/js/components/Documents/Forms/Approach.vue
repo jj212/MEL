@@ -21,6 +21,7 @@
 <script>
 
     import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+//    import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 //    import FontPlugin from '@ckeditor/ckeditor5-font/src/font';
 //    import ParagraphPlugin from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 
@@ -44,11 +45,11 @@
 
             //  editorData: '<p>Content of the editor.</p>',
                 editorConfig: {
-                   /* plugins: [
-                        ParagraphPlugin
+                    /*plugins: [
+                        FontPlugin
                     ],*/
             // The configuration of the editor.
-//                    toolbar: [ 'bold', 'italic', '|', 'link', 'colors' ]
+//                    toolbar: [ 'bold', 'italic', '|', 'link', 'fontFamily' ]
 
                 },
                 tabNo: this.currentTab,

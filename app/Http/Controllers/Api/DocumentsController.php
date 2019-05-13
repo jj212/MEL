@@ -4,12 +4,14 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\Document;
 
-use Barryvdh\DomPDF\PDF;
+//use Barryvdh\DomPDF\PDF;
+use Barryvdh\DomPDF\Facade as PDF;
 use Dompdf\Dompdf;
+use Dompdf\Options;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use PhpOffice\PhpWord\TemplateProcessor;
-use RobbieP\CloudConvertLaravel\Facades\CloudConvert;
+//use RobbieP\CloudConvertLaravel\Facades\CloudConvert;
 
 class DocumentsController extends Controller
 {
@@ -89,17 +91,24 @@ class DocumentsController extends Controller
 //        dd('hello');
 
 
-        $html = file_get_contents(public_path().'/templates/testhtml.html');
+
+        $html = file_get_contents(public_path().'/templates/template.html');
         $html = str_replace('##{approach_text}##',$data['approach']['approach'],$html);
         $html = str_replace('##{approach_principles}##',$data['approach']['principles'],$html);
 
         $path = 'exports/'.time().'_Final_M_AND_E_Framework-YFBP.pdf';
 
-        $dompdf = new Dompdf();
+        PDF::loadHTML($html)->setWarnings(false)->save(public_path().'/'.$path);
+
+       /* $options = new Options();
+        $options->set('isRemoteEnabled', true);
+
+        $dompdf = new Dompdf($options);
+
         $dompdf->loadHtml($html);
         $dompdf->render();
-        $output = $dompdf->output(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true]);
-        file_put_contents(public_path().'/'.$path, $output);
+        $output = $dompdf->output();
+        file_put_contents(public_path().'/'.$path, $output);*/
 
         return $path;
     }

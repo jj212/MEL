@@ -4,37 +4,43 @@
             <div class="container">
                 <div class="progress-block">
                     <div class="progress-indicator">
-                        <div style="width:692px;" class="progress-bar">
+                        <div style="width:662px;" class="progress-bar">
                             <div style="width:0%;" class="progress-bar-value"></div>
                         </div>
                         <div class="progress-indicator-tag-wrapper" style="left: -10px; top: -9px;">
                             <div v-bind:class="(currentTab > 1)?'progress-indicator-tag-complete':'progress-indicator-tag'" class="progress-indicator-tag">
                                 <div class="progress-indicator-tag-circle"></div>
-                                <div class="progress-indicator-tag-name progress-active" v-bind:class="{'progress-active': currentTab == 1}">Approach</div>
+                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 1}">Approach</div>
                             </div>
                         </div>
-                        <div class="progress-indicator-tag-wrapper" style="left: 356px; top: -9px;">
+                        <div class="progress-indicator-tag-wrapper" style="left: 120px; top: -9px;">
                             <div v-bind:class="(currentTab > 2)?'progress-indicator-tag-complete':'progress-indicator-tag'" class="progress-indicator-tag">
                                 <div class="progress-indicator-tag-circle"></div>
-                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 2}">Approach Principles</div>
+                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 2}">Principles</div>
                             </div>
                         </div>
-                        <!--<div class="progress-indicator-tag-wrapper" style="left: 340px; top: -9px;">
+                        <div class="progress-indicator-tag-wrapper" style="left: 250px; top: -9px;">
                             <div v-bind:class="(currentTab > 3)?'progress-indicator-tag-complete':'progress-indicator-tag'" class="progress-indicator-tag">
                                 <div class="progress-indicator-tag-circle"></div>
-                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 3}">Document Category</div>
+                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 3}">Scope Audience</div>
                             </div>
                         </div>
-                        <div class="progress-indicator-tag-wrapper" style="left: 515px; top: -9px;">
+                        <div class="progress-indicator-tag-wrapper" style="left: 400px; top: -9px;">
                             <div v-bind:class="(currentTab > 4)?'progress-indicator-tag-complete':'progress-indicator-tag'" class="progress-indicator-tag">
                                 <div class="progress-indicator-tag-circle"></div>
-                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 4}">Loan Info</div>
+                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 4}">Ethical Considerations</div>
                             </div>
-                        </div>-->
-                        <div class="progress-indicator-tag-wrapper" style="left: 690px; top: -9px;">
-                            <div v-bind:class="(currentTab > 3)?'progress-indicator-tag-complete':'progress-indicator-tag'" class="progress-indicator-tag">
+                        </div>
+                        <div class="progress-indicator-tag-wrapper" style="left: 530px; top: -9px;">
+                            <div v-bind:class="(currentTab > 5)?'progress-indicator-tag-complete':'progress-indicator-tag'" class="progress-indicator-tag">
                                 <div class="progress-indicator-tag-circle"></div>
-                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 3}">Complete</div>
+                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 5}">Limitations</div>
+                            </div>
+                        </div>
+                        <div class="progress-indicator-tag-wrapper" style="left: 660px; top: -9px;">
+                            <div v-bind:class="(currentTab > 6)?'progress-indicator-tag-complete':'progress-indicator-tag'" class="progress-indicator-tag">
+                                <div class="progress-indicator-tag-circle"></div>
+                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 6}">Complete</div>
                             </div>
                         </div>
                     </div>
