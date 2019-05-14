@@ -92,7 +92,7 @@ class DocumentsController extends Controller
 
 
 
-        $html = file_get_contents(public_path().'/templates/template.html');
+        $html = file_get_contents(public_path().'/templates/testhtml.html');
         $html = str_replace('##{approach_text}##',$data['approach']['approach'],$html);
         $html = str_replace('##{approach_principles}##',$data['approach']['principles'],$html);
 

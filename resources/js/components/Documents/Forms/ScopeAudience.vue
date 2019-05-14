@@ -12,7 +12,7 @@
             <fieldset>
                 <legend>Table: Evaluation Audience and their Information Needs</legend>
 
-                <div v-for="tbl in document.approach.scope_audience_tbl">
+                <div v-for="tbl in document.approach.scope_audience_tbl" style="padding: 10px 40px; border: 2px dashed lightcoral;">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" v-model="tbl.name" v-validate="'required'" placeholder="Ex. Program implementation partners ...">
@@ -115,3 +115,7 @@
         }
     }
 </script>
+
+<style>
+    tbody .ck-editor__main .ck-content { height:85px !important; }
+</style>

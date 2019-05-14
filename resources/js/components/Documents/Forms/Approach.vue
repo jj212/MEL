@@ -78,5 +78,5 @@
 </script>
 
 <style>
-    .ck-editor__main .ck-content { height:220px !important; }
+    .ck-editor__main .ck-content { height:220px; }
 </style>
