@@ -86,22 +86,29 @@ class DocumentsController extends Controller
 
     public function generatePdf($data)
     {
+//        dd($data);
 
 //        CloudConvert::file(public_path().'/exports/'.'test.pdf')->to(public_path().'/exports/'.'test00.docx');
 //        dd('hello');
 
 
 
-        $html = file_get_contents(public_path().'/templates/testhtml.html');
+        /*$html = file_get_contents(public_path().'/templates/section2_template.html');
         $html = str_replace('##{approach_text}##',$data['approach']['approach'],$html);
         $html = str_replace('##{approach_principles}##',$data['approach']['principles'],$html);
+        $html = str_replace('##{approach_scope_audience}##',$data['approach']['scope_audience'],$html);
+        $html = str_replace('##{approach_ethical_considerations}##',$data['approach']['ethical_considerations'],$html);
+        $html = str_replace('##{approach_limitations}##',$data['approach']['limitation'],$html);*/
 
         $path = 'exports/'.time().'_Final_M_AND_E_Framework-YFBP.pdf';
 
-        PDF::loadHTML($html)->setWarnings(false)->save(public_path().'/'.$path);
+//        PDF::loadHTML($html)->setWarnings(false)->save(public_path().'/'.$path);
+
+        PDF::loadView('templates.section2', ['data'=>$data])->save(public_path().'/'.$path);
 
        /* $options = new Options();
         $options->set('isRemoteEnabled', true);
+        $options->set('DOMPDF_ENABLE_CSS_FLOAT', true);
 
         $dompdf = new Dompdf($options);
 
