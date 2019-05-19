@@ -32,7 +32,8 @@
                                     <Scope-Audience v-if="currentTab == 3" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Scope-Audience>
                                     <Ethical-Consideration v-if="currentTab == 4" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Ethical-Consideration>
                                     <Limitations v-if="currentTab == 5" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Limitations>
-                                    <Complete v-if="currentTab == 6 && generatedDoc" :document="generatedDoc"></Complete>
+                                    <KeyEvolution-Questions v-if="currentTab == 6" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></KeyEvolution-Questions>
+                                    <Complete v-if="currentTab == 7 && generatedDoc" :document="generatedDoc"></Complete>
                                 </div>
                             </div>
                             <!-- /marketing campaigns -->
@@ -61,6 +62,7 @@
     import ScopeAudience from './Forms/ScopeAudience.vue'
     import EthicalConsideration from './Forms/EthicalConsideration.vue'
     import Limitations from './Forms/Limitations.vue'
+    import KeyEvolutionQuestions from './Forms/KeyEvolutionQuestions.vue'
     import Complete from './Forms/Complete.vue'
 
     export default {
@@ -72,6 +74,7 @@
             ScopeAudience,
             EthicalConsideration,
             Limitations,
+            KeyEvolutionQuestions,
             Complete
         },
         data () {
@@ -87,7 +90,15 @@
                                 {stakeholder:'', need:''}
                             ]
                         }],
-                        ethical_considerations: ''
+                        ethical_considerations: '',
+                        key_evolution_questions: '',
+                        key_evolution_tbl: [
+                            {criteria:'Effectiveness', question:'', subQuestion:''},
+                            {criteria:'Impact', question:'', subQuestion:''},
+                            {criteria:'Sustainability', question:'', subQuestion:''},
+                            {criteria:'Appropriateness', question:'', subQuestion:''}
+                        ],
+                        operational_steps:''
                     },
                 },
                 generatedDoc:{},
@@ -102,7 +113,7 @@
             },
             handleCurrentTab (event) {
                 this.currentTab = event;
-                if(this.currentTab == 6) {
+                if(this.currentTab == 7) {
                     this.generateDocument();
                 }
             },

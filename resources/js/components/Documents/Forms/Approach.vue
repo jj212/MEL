@@ -4,7 +4,7 @@
             <div class="form-group has-feedback has-feedback-left">
                 <label for="title">Approach</label>
 
-                <ckeditor name="approach" tag-name="textarea" :editor="editor" v-model="document.approach.approach" :config="editorConfig" v-validate="'required|min:10'" placeholder="Approach text here ..." id="approach"></ckeditor>
+                <ckeditor name="approach" :editor="editor" v-model="document.approach.approach" :config="editorConfig" v-validate="'required|min:10'" placeholder="Approach text here ..." id="approach"></ckeditor>
 
                 <!--<textarea name="title" v-model="document.approach.title" class="form-control" v-validate="'required|min:10'" placeholder="Approach title text here ..." id="title"></textarea>-->
                 <span v-if="errors.has('title')" class="text-danger">{{ errors.first('title') }}</span>

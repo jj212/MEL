@@ -3083,7 +3083,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Forms_ScopeAudience_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Forms/ScopeAudience.vue */ "./resources/js/components/Documents/Forms/ScopeAudience.vue");
 /* harmony import */ var _Forms_EthicalConsideration_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Forms/EthicalConsideration.vue */ "./resources/js/components/Documents/Forms/EthicalConsideration.vue");
 /* harmony import */ var _Forms_Limitations_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Forms/Limitations.vue */ "./resources/js/components/Documents/Forms/Limitations.vue");
-/* harmony import */ var _Forms_Complete_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Forms/Complete.vue */ "./resources/js/components/Documents/Forms/Complete.vue");
+/* harmony import */ var _Forms_KeyEvolutionQuestions_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Forms/KeyEvolutionQuestions.vue */ "./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue");
+/* harmony import */ var _Forms_Complete_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Forms/Complete.vue */ "./resources/js/components/Documents/Forms/Complete.vue");
 //
 //
 //
@@ -3140,6 +3141,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+
 
 
 
@@ -3156,7 +3159,8 @@ __webpack_require__.r(__webpack_exports__);
     ScopeAudience: _Forms_ScopeAudience_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
     EthicalConsideration: _Forms_EthicalConsideration_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
     Limitations: _Forms_Limitations_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-    Complete: _Forms_Complete_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
+    KeyEvolutionQuestions: _Forms_KeyEvolutionQuestions_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+    Complete: _Forms_Complete_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
   },
   data: function data() {
     return {
@@ -3172,7 +3176,25 @@ __webpack_require__.r(__webpack_exports__);
               need: ''
             }]
           }],
-          ethical_considerations: ''
+          ethical_considerations: '',
+          key_evolution_questions: '',
+          key_evolution_tbl: [{
+            criteria: 'Effectiveness',
+            question: '',
+            subQuestion: ''
+          }, {
+            criteria: 'Impact',
+            question: '',
+            subQuestion: ''
+          }, {
+            criteria: 'Sustainability',
+            question: '',
+            subQuestion: ''
+          }, {
+            criteria: 'Appropriateness',
+            question: '',
+            subQuestion: ''
+          }]
         }
       },
       generatedDoc: {},
@@ -3188,7 +3210,7 @@ __webpack_require__.r(__webpack_exports__);
     handleCurrentTab: function handleCurrentTab(event) {
       this.currentTab = event;
 
-      if (this.currentTab == 6) {
+      if (this.currentTab == 7) {
         this.generateDocument();
       }
     },
@@ -3474,6 +3496,110 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     ethicalConsiderationForm: function ethicalConsiderationForm() {
+      var _this = this;
+
+      this.$validator.validateAll().then(function (result) {
+        if (result) {
+          _this.tabNo += 1;
+
+          _this.$emit('tabChanged', _this.tabNo);
+
+          _this.$emit('docChanged', _this.document);
+        }
+      });
+    },
+    back: function back() {
+      this.tabNo -= 1;
+      this.$emit('tabChanged', this.tabNo);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ckeditor/ckeditor5-build-classic */ "./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js");
+/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'ScopeAudience',
+  props: {
+    document: {
+      type: Object
+    },
+    currentTab: {
+      type: Number,
+      "default": function _default() {
+        return 1;
+      }
+    }
+  },
+  data: function data() {
+    return {
+      editor: _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0___default.a,
+      //  editorData: '<p>Content of the editor.</p>',
+      editorConfig: {// The configuration of the editor.
+      },
+      tabNo: this.currentTab
+    };
+  },
+  methods: {
+    keyEvolutionForm: function keyEvolutionForm() {
       var _this = this;
 
       this.$validator.validateAll().then(function (result) {
@@ -4001,6 +4127,12 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -35633,6 +35765,25 @@ exports.push([module.i, "\n.ck-editor__main .ck-content { height:220px;\n}\n", "
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=style&index=0&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=style&index=0&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\ntbody .ck-editor__main .ck-content { height:85px !important;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/ScopeAudience.vue?vue&type=style&index=0&lang=css&":
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/ScopeAudience.vue?vue&type=style&index=0&lang=css& ***!
@@ -35683,7 +35834,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*=============Progress===============*/\n.page.ab-test .section-progress-block[data-v-352f1158] {\n    height: 55px;\n    margin-top: 25px;\n}\n.page.ab-test div[data-v-352f1158] {\n    display: block !important;\n}\n.page.ab-test .section-progress-block>.container[data-v-352f1158] {\n    margin: 0 auto;\n    max-width: 100%;\n    box-sizing: border-box;\n    height: 100%;\n    display: flex;\n}\n.page.ab-test .section-progress-block>.container .progress-block[data-v-352f1158] {\n    width: 80%;\n    height: inherit;\n    position: relative;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n}\n.page.ab-test .section-progress-block>.container .progress-block .progress-indicator[data-v-352f1158] {\n    position: absolute;\n    left: 50%;\n    top: 54%;\n    -webkit-transform: translate(-50%, -50%);\n    transform: translate(-50%, -50%);\n}\n.page.ab-test .progress-bar[data-v-352f1158] {\n    position: relative;\n    height: 3px;\n    z-index: 0;\n}\n.page.ab-test .progress-bar .progress-bar-value[data-v-352f1158] {\n    height: 100%;\n    background: #2996CC;\n    transition: all 0.4s ease-in-out;\n}\n.page.ab-test .progress-indicator .progress-indicator-tag-wrapper[data-v-352f1158] {\n    position: absolute;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-current[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 18px;\n    height: 18px;\n    border: 1px solid silver;\n    border-radius: 50% !important;\n    margin: 0 auto;\n    /*cursor: pointer;*/\n    background: white;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 16px;\n    height: 16px;\n    border: 2px solid #f69768;\n}\n.page.ab-test .progress-indicator-tag .progress-indicator-tag-name[data-v-352f1158] {\n    position: absolute;\n    font-family: \"Open Sans\",\"Helvetica Neue\",Arial,Helvetica,Verdana,sans-serif;\n    font-weight: normal;\n    font-size: 14px;\n    color: #C0C0C0;\n    top: -20px;\n    white-space: nowrap;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n    letter-spacing: 0.5px;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-name[data-v-352f1158] {\n    font-weight: bold;\n    color: #F69768;\n}\n.page.ab-test .progress-indicator-tag .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 18px;\n    height: 18px;\n    border: 1px solid silver;\n    border-radius: 50% !important;\n    margin: 0 auto;\n    /*cursor: pointer;*/\n    background: white;\n}\n.page.ab-test .progress-indicator-tag[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-complete[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-complete .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 20px;\n    height: 20px;\n    border: 0px solid transparent;\n    border-radius: 50% !important;\n    background-color: #2996CC;\n    background-image: url(https://app.legaltemplates.net/assets/icon_progress_bar_checked-1fb8d38d25c32ee9c61fe566ebd77868.png);\n    background-repeat: no-repeat;\n    background-position: center;\n    margin: 0 auto;\n}\n.page.ab-test .progress-indicator-tag-complete .progress-indicator-tag-name[data-v-352f1158] {\n    position: absolute;\n    font-family: \"Open Sans\",\"Helvetica Neue\",Arial,Helvetica,Verdana,sans-serif;\n    font-size: 14px;\n    top: -20px;\n    white-space: nowrap;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n    letter-spacing: 0.5px;\n    font-weight: bold;\n    color: #2996CC;\n}\n.page.ab-test .progress-bar[data-v-352f1158]::before {\n    position: absolute;\n    display: block;\n    content: \" \";\n    background: #C0C0C0;\n    top: 1px;\n    height: 1px;\n    width: 100%;\n    z-index: -1;\n}\n.progress-active[data-v-352f1158] {\n    color: green !important;\n    font-weight: 600 !important;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*=============Progress===============*/\n.page.ab-test .section-progress-block[data-v-352f1158] {\n    height: 55px;\n    margin-top: 25px;\n}\n.page.ab-test div[data-v-352f1158] {\n    display: block !important;\n}\n.page.ab-test .section-progress-block>.container[data-v-352f1158] {\n    margin: 0 auto;\n    max-width: 100%;\n    box-sizing: border-box;\n    height: 100%;\n    display: flex;\n}\n.page.ab-test .section-progress-block>.container .progress-block[data-v-352f1158] {\n    width: 80%;\n    height: inherit;\n    position: relative;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n}\n.page.ab-test .section-progress-block>.container .progress-block .progress-indicator[data-v-352f1158] {\n    position: absolute;\n    left: 50%;\n    top: 54%;\n    -webkit-transform: translate(-50%, -50%);\n    transform: translate(-50%, -50%);\n}\n.page.ab-test .progress-bar[data-v-352f1158] {\n    position: relative;\n    height: 3px;\n    z-index: 0;\n}\n.page.ab-test .progress-bar .progress-bar-value[data-v-352f1158] {\n    height: 100%;\n    background: #2996CC;\n    transition: all 0.4s ease-in-out;\n}\n.page.ab-test .progress-indicator .progress-indicator-tag-wrapper[data-v-352f1158] {\n    position: absolute;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-current[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 18px;\n    height: 18px;\n    border: 1px solid silver;\n    border-radius: 50% !important;\n    margin: 0 auto;\n    /*cursor: pointer;*/\n    background: white;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 16px;\n    height: 16px;\n    border: 2px solid #f69768;\n}\n.page.ab-test .progress-indicator-tag .progress-indicator-tag-name[data-v-352f1158] {\n    position: absolute;\n    font-family: \"Open Sans\",\"Helvetica Neue\",Arial,Helvetica,Verdana,sans-serif;\n    font-weight: normal;\n    font-size: 14px;\n    color: #C0C0C0;\n    top: -20px;\n    white-space: nowrap;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n    letter-spacing: 0.5px;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-name[data-v-352f1158] {\n    font-weight: bold;\n    color: #F69768;\n}\n.page.ab-test .progress-indicator-tag .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 18px;\n    height: 18px;\n    border: 1px solid silver;\n    border-radius: 50% !important;\n    margin: 0 auto;\n    /*cursor: pointer;*/\n    background: white;\n}\n.page.ab-test .progress-indicator-tag[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-complete[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-complete .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 20px;\n    height: 20px;\n    border: 0px solid transparent;\n    border-radius: 50% !important;\n    background-color: #2996CC;\n    background-image: url(https://app.legaltemplates.net/assets/icon_progress_bar_checked-1fb8d38d25c32ee9c61fe566ebd77868.png);\n    background-repeat: no-repeat;\n    background-position: center;\n    margin: 0 auto;\n}\n.page.ab-test .progress-indicator-tag-complete .progress-indicator-tag-name[data-v-352f1158] {\n    position: absolute;\n    font-family: \"Open Sans\",\"Helvetica Neue\",Arial,Helvetica,Verdana,sans-serif;\n    font-size: 14px;\n    top: -20px;\n    white-space: nowrap;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n    letter-spacing: 0.5px;\n    font-weight: bold;\n    color: #2996CC;\n}\n.page.ab-test .progress-bar[data-v-352f1158]::before {\n    position: absolute;\n    display: block;\n    content: \" \";\n    background: #C0C0C0;\n    top: 1px;\n    height: 1px;\n    width: 100%;\n    z-index: -1;\n}\n.progress-active[data-v-352f1158] {\n    color: green !important;\n    font-weight: 600 !important;\n}\n", ""]);
 
 // exports
 
@@ -67199,6 +67350,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=style&index=0&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=style&index=0&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--6-1!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/src??ref--6-2!../../../../../node_modules/vue-loader/lib??vue-loader-options!./KeyEvolutionQuestions.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/ScopeAudience.vue?vue&type=style&index=0&lang=css&":
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/ScopeAudience.vue?vue&type=style&index=0&lang=css& ***!
@@ -79139,7 +79320,20 @@ var render = function() {
                         })
                       : _vm._e(),
                     _vm._v(" "),
-                    _vm.currentTab == 6 && _vm.generatedDoc
+                    _vm.currentTab == 6
+                      ? _c("KeyEvolution-Questions", {
+                          attrs: {
+                            document: _vm.document,
+                            currentTab: _vm.currentTab
+                          },
+                          on: {
+                            docChanged: _vm.handleDocument,
+                            tabChanged: _vm.handleCurrentTab
+                          }
+                        })
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.currentTab == 7 && _vm.generatedDoc
                       ? _c("Complete", {
                           attrs: { document: _vm.generatedDoc }
                         })
@@ -79216,7 +79410,6 @@ var render = function() {
               ],
               attrs: {
                 name: "approach",
-                "tag-name": "textarea",
                 editor: _vm.editor,
                 config: _vm.editorConfig,
                 placeholder: "Approach text here ...",
@@ -79510,6 +79703,191 @@ var render = function() {
   ])
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=template&id=ab149102&":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=template&id=ab149102& ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "col-md-12" }, [
+    _c(
+      "form",
+      {
+        staticClass: "form-horizontal",
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            return _vm.keyEvolutionForm($event)
+          }
+        }
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "form-group has-feedback has-feedback-left" },
+          [
+            _c("label", { attrs: { for: "keyevolution" } }, [
+              _vm._v("Key Evolution Questions")
+            ]),
+            _vm._v(" "),
+            _c("ckeditor", {
+              directives: [
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: "required|min:10",
+                  expression: "'required|min:10'"
+                }
+              ],
+              attrs: {
+                name: "keyevolution",
+                editor: _vm.editor,
+                config: _vm.editorConfig,
+                placeholder: "Key Evolution Questions text here ...",
+                id: "keyevolution"
+              },
+              model: {
+                value: _vm.document.approach.key_evolution_questions,
+                callback: function($$v) {
+                  _vm.$set(
+                    _vm.document.approach,
+                    "key_evolution_questions",
+                    $$v
+                  )
+                },
+                expression: "document.approach.key_evolution_questions"
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.has("keyevolution")
+              ? _c("span", { staticClass: "text-danger" }, [
+                  _vm._v(_vm._s(_vm.errors.first("keyevolution")))
+                ])
+              : _vm._e()
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("fieldset", [
+          _c("legend", [_vm._v("Table: Key Evaluation Questions")]),
+          _vm._v(" "),
+          _c("table", { staticClass: "table table-bordered" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "tbody",
+              _vm._l(_vm.document.approach.key_evolution_tbl, function(tbl) {
+                return _c("tr", [
+                  _c("td", [
+                    _vm._v(
+                      "\n                            " +
+                        _vm._s(tbl.criteria) +
+                        "\n                        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    [
+                      _c("ckeditor", {
+                        attrs: {
+                          name: "evolution_question",
+                          editor: _vm.editor,
+                          config: _vm.editorConfig,
+                          placeholder: "Question text here ..."
+                        },
+                        model: {
+                          value: tbl.question,
+                          callback: function($$v) {
+                            _vm.$set(tbl, "question", $$v)
+                          },
+                          expression: "tbl.question"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    [
+                      _c("ckeditor", {
+                        attrs: {
+                          name: "evolution_sub_question",
+                          editor: _vm.editor,
+                          config: _vm.editorConfig,
+                          placeholder: "Sub-Question text here ..."
+                        },
+                        model: {
+                          value: tbl.subQuestion,
+                          callback: function($$v) {
+                            _vm.$set(tbl, "subQuestion", $$v)
+                          },
+                          expression: "tbl.subQuestion"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ])
+              }),
+              0
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group text-center" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-info",
+              attrs: { type: "button" },
+              on: { click: _vm.back }
+            },
+            [_vm._v("Back")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+            [_vm._v("Next")]
+          )
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Criteria")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Key Evaluation Question")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Sub-question")])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -80692,6 +81070,38 @@ var render = function() {
                         staticClass: "progress-indicator-tag-name",
                         class: { "progress-active": _vm.currentTab == 6 }
                       },
+                      [_vm._v("Key Evolution")]
+                    )
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "progress-indicator-tag-wrapper",
+                staticStyle: { left: "790px", top: "-9px" }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "progress-indicator-tag",
+                    class:
+                      _vm.currentTab > 7
+                        ? "progress-indicator-tag-complete"
+                        : "progress-indicator-tag"
+                  },
+                  [
+                    _c("div", { staticClass: "progress-indicator-tag-circle" }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "progress-indicator-tag-name",
+                        class: { "progress-active": _vm.currentTab == 7 }
+                      },
                       [_vm._v("Complete")]
                     )
                   ]
@@ -80711,7 +81121,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "progress-bar", staticStyle: { width: "662px" } },
+      { staticClass: "progress-bar", staticStyle: { width: "792px" } },
       [
         _c("div", {
           staticClass: "progress-bar-value",
@@ -96191,6 +96601,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EthicalConsideration_vue_vue_type_template_id_885ebc40___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EthicalConsideration_vue_vue_type_template_id_885ebc40___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _KeyEvolutionQuestions_vue_vue_type_template_id_ab149102___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./KeyEvolutionQuestions.vue?vue&type=template&id=ab149102& */ "./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=template&id=ab149102&");
+/* harmony import */ var _KeyEvolutionQuestions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./KeyEvolutionQuestions.vue?vue&type=script&lang=js& */ "./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _KeyEvolutionQuestions_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./KeyEvolutionQuestions.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _KeyEvolutionQuestions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _KeyEvolutionQuestions_vue_vue_type_template_id_ab149102___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _KeyEvolutionQuestions_vue_vue_type_template_id_ab149102___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_KeyEvolutionQuestions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./KeyEvolutionQuestions.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_KeyEvolutionQuestions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=style&index=0&lang=css&":
+/*!************************************************************************************************************!*\
+  !*** ./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=style&index=0&lang=css& ***!
+  \************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_KeyEvolutionQuestions_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader!../../../../../node_modules/css-loader??ref--6-1!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/src??ref--6-2!../../../../../node_modules/vue-loader/lib??vue-loader-options!./KeyEvolutionQuestions.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_KeyEvolutionQuestions_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_KeyEvolutionQuestions_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_KeyEvolutionQuestions_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_KeyEvolutionQuestions_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_KeyEvolutionQuestions_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=template&id=ab149102&":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=template&id=ab149102& ***!
+  \**********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_KeyEvolutionQuestions_vue_vue_type_template_id_ab149102___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./KeyEvolutionQuestions.vue?vue&type=template&id=ab149102& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=template&id=ab149102&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_KeyEvolutionQuestions_vue_vue_type_template_id_ab149102___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_KeyEvolutionQuestions_vue_vue_type_template_id_ab149102___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

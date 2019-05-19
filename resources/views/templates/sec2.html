@@ -58,6 +58,8 @@
    </style>
 </head>
 <body class="c33">
+<ol class="c3 lst-kix_erkl8hua5q61-0 start" start="2"></ol>
+
 <ol class="c3 lst-kix_erkl8hua5q61-0 start" start="2">
    <li class="c22 c29" style="text-indent: 0">
       <h1 id="h.z337ya" style="display:inline"><span class="c18">MERI approach, principles and scope</span></h1>
@@ -104,20 +106,20 @@
       <tbody>
       @if(count($data['approach']['scope_audience_tbl']))
 
-         @foreach($data['approach']['scope_audience_tbl'] as $val)
-            <tr>
-               <td colspan="2"><span style="color: #e26e00; font-size: 15px">{!!  $val['name']  !!}</span></td>
-            </tr>
-            @if(count($val['data']))
-               @foreach($val['data'] as $item)
-                  <tr>
-                     <td>{!! $item['stakeholder'] !!}</td>
-                     <td>{!! $item['need'] !!}</td>
-                  </tr>
-               @endforeach
-            @endif
+      @foreach($data['approach']['scope_audience_tbl'] as $val)
+      <tr>
+         <td colspan="2"><span style="color: #e26e00; font-size: 15px">{!!  $val['name']  !!}</span></td>
+      </tr>
+      @if(count($val['data']))
+      @foreach($val['data'] as $item)
+      <tr>
+         <td>{!! $item['stakeholder'] !!}</td>
+         <td>{!! $item['need'] !!}</td>
+      </tr>
+      @endforeach
+      @endif
 
-         @endforeach
+      @endforeach
 
       @endif
       </tbody>
@@ -172,13 +174,13 @@
          <tbody>
          @if(count($data['approach']['key_evolution_tbl']))
 
-            @foreach($data['approach']['key_evolution_tbl'] as $val)
-               <tr>
-                  <td>{!! $val['criteria'] !!}</td>
-                  <td>{!! $val['question'] !!}</td>
-                  <td>{!! $val['subQuestion'] !!}</td>
-               </tr>
-            @endforeach
+         @foreach($data['approach']['key_evolution_tbl'] as $val)
+         <tr>
+            <td>{!! $val['criteria'] !!}</td>
+            <td>{!! $val['question'] !!}</td>
+            <td>{!! $val['subQuestion'] !!}</td>
+         </tr>
+         @endforeach
          @endif
          </tbody>
       </table>
@@ -186,20 +188,20 @@
 
 </div>
 
+<div style="display: inline-block; width: 100%">
+   <ol class="c3 lst-kix_erkl8hua5q61-0 start" start="4">
+      <li class="c22 c29" style="text-indent: 0; color: #e26e00;font-size: 20pt;border-bottom: 1px solid #e26e00;">
+         <h1 style="display:inline"><span class="c18">Operational steps</span></h1>
+      </li>
+   </ol>
 
-<ol class="c3 lst-kix_erkl8hua5q61-0 start" start="4">
-   <li class="c22 c29" style="text-indent: 0; color: #e26e00;font-size: 20pt;border-bottom: 1px solid #e26e00;">
-      <h1 style="display:inline"><span class="c18">Operational steps</span></h1>
-   </li>
-</ol>
+   <ol class="c3 lst-kix_erkl8hua5q61-1 start">
+      <li class="c40 c22" style="text-indent: 0">
+         <h2 style="display:inline"><span class="c5">How the operational components of the MERI framework fit together </span></h2>
+      </li>
+   </ol>
 
-<ol class="c3 lst-kix_erkl8hua5q61-1 start" start="1">
-   <li class="c40 c22" style="text-indent: 0">
-      <h2 style="display:inline"><span class="c5">How the operational components of the MERI framework fit together </span></h2>
-   </li>
-</ol>
-
-
+</div>
 
 </body>
 </html>
