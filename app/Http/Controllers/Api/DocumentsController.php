@@ -8,6 +8,9 @@ use App\Models\Document;
 use Barryvdh\DomPDF\Facade as PDF;
 use Dompdf\Dompdf;
 use Dompdf\Options;
+
+use GrofGraf\LaravelPDFMerger\Facades\PDFMergerFacade;
+use GrofGraf\LaravelPDFMerger\PDFMerger;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use PhpOffice\PhpWord\TemplateProcessor;
@@ -116,6 +119,13 @@ class DocumentsController extends Controller
         $dompdf->render();
         $output = $dompdf->output();
         file_put_contents(public_path().'/'.$path, $output);*/
+
+        $merger = new PDFMerger();
+        $merger = $merger->init();
+        $merger->addPathToPDF(public_path('templates/1st_part_copy.pdf'), 'all', 'P');
+//        $merger->addPDFString(file_get_contents(base_path('/vendor/grofgraf/laravel-pdf-merger/examples/two.pdf')), 'all', 'L');
+        $merger->merge();
+        $merger->save(public_path().'/'.$path);
 
         return $path;
     }
