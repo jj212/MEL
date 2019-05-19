@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="progress-block">
                     <div class="progress-indicator">
-                        <div style="width:792px;" class="progress-bar">
+                        <div style="width:922px;" class="progress-bar">
                             <div style="width:0%;" class="progress-bar-value"></div>
                         </div>
                         <div class="progress-indicator-tag-wrapper" style="left: -10px; top: -9px;">
@@ -46,7 +46,13 @@
                         <div class="progress-indicator-tag-wrapper" style="left: 790px; top: -9px;">
                             <div v-bind:class="(currentTab > 7)?'progress-indicator-tag-complete':'progress-indicator-tag'" class="progress-indicator-tag">
                                 <div class="progress-indicator-tag-circle"></div>
-                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 7}">Complete</div>
+                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 7}">Operational steps</div>
+                            </div>
+                        </div>
+                        <div class="progress-indicator-tag-wrapper" style="left: 920px; top: -9px;">
+                            <div v-bind:class="(currentTab > 8)?'progress-indicator-tag-complete':'progress-indicator-tag'" class="progress-indicator-tag">
+                                <div class="progress-indicator-tag-circle"></div>
+                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 8}">Complete</div>
                             </div>
                         </div>
                     </div>

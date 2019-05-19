@@ -50,7 +50,7 @@
                     ],*/
             // The configuration of the editor.
 //                    toolbar: [ 'bold', 'italic', '|', 'link', 'fontFamily' ]
-                    toolbar: [ 'ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo' ],
+//                    toolbar: [ 'ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo' ],
                     ckfinder: {
                         uploadUrl: '/ckfinder/connector?command=QuickUpload&type=Files&responseType=json',
 //                        uploadUrl: '/api/ckfinder/image/upload',

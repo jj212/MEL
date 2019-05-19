@@ -199,6 +199,8 @@
    </li>
 </ol>
 
+{!! $data['approach']['operational_steps'] !!}
+
 
 
 </body>

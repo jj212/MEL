@@ -33,7 +33,8 @@
                                     <Ethical-Consideration v-if="currentTab == 4" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Ethical-Consideration>
                                     <Limitations v-if="currentTab == 5" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Limitations>
                                     <KeyEvolution-Questions v-if="currentTab == 6" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></KeyEvolution-Questions>
-                                    <Complete v-if="currentTab == 7 && generatedDoc" :document="generatedDoc"></Complete>
+                                    <Operational-Steps v-if="currentTab == 7" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Operational-Steps>
+                                    <Complete v-if="currentTab == 8 && generatedDoc" :document="generatedDoc"></Complete>
                                 </div>
                             </div>
                             <!-- /marketing campaigns -->
@@ -63,6 +64,7 @@
     import EthicalConsideration from './Forms/EthicalConsideration.vue'
     import Limitations from './Forms/Limitations.vue'
     import KeyEvolutionQuestions from './Forms/KeyEvolutionQuestions.vue'
+    import OperationalSteps from './Forms/OperationalSteps.vue'
     import Complete from './Forms/Complete.vue'
 
     export default {
@@ -75,6 +77,7 @@
             EthicalConsideration,
             Limitations,
             KeyEvolutionQuestions,
+            OperationalSteps,
             Complete
         },
         data () {
@@ -113,7 +116,7 @@
             },
             handleCurrentTab (event) {
                 this.currentTab = event;
-                if(this.currentTab == 7) {
+                if(this.currentTab == 8) {
                     this.generateDocument();
                 }
             },

@@ -3,7 +3,7 @@
         <form class="form-horizontal" @submit.prevent="operationalForm">
 
             <div class="form-group has-feedback has-feedback-left">
-                <label for="operational_steps">Limitations</label>
+                <label for="operational_steps">How the operational components of the MERI framework fit together</label>
                 <ckeditor name="operational_steps" :editor="editor" v-model="document.approach.operational_steps" :config="editorConfig" v-validate="'required|min:10'" placeholder="Approach scope audience text here ..." id="operational_steps"></ckeditor>
                 <span v-if="errors.has('operational_steps')" class="text-danger">{{ errors.first('operational_steps') }}</span>
             </div>
@@ -38,6 +38,11 @@
                 //  editorData: '<p>Content of the editor.</p>',
                 editorConfig: {
                     // The configuration of the editor.
+                    toolbar: [ 'ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo' ],
+                    ckfinder: {
+                        uploadUrl: '/ckfinder/connector?command=QuickUpload&type=Files&responseType=json',
+//                        uploadUrl: '/api/ckfinder/image/upload',
+                    },
                 },
                 tabNo: this.currentTab,
             }
