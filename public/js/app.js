@@ -3194,7 +3194,8 @@ __webpack_require__.r(__webpack_exports__);
             criteria: 'Appropriateness',
             question: '',
             subQuestion: ''
-          }]
+          }],
+          operational_steps: ''
         }
       },
       generatedDoc: {},
@@ -3294,6 +3295,11 @@ __webpack_require__.r(__webpack_exports__);
         ],*/
         // The configuration of the editor.
         //                    toolbar: [ 'bold', 'italic', '|', 'link', 'fontFamily' ]
+        toolbar: ['ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo'],
+        ckfinder: {
+          uploadUrl: '/ckfinder/connector?command=QuickUpload&type=Files&responseType=json' //                        uploadUrl: '/api/ckfinder/image/upload',
+
+        }
       },
       tabNo: this.currentTab
     };
@@ -3319,6 +3325,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     deleteLevel: function deleteLevel(index) {
       this.document.approach.levels.splice(index, 1);
+    },
+    upload: function upload() {
+      alert('hhhh');
     }
   }
 });
@@ -3575,6 +3584,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+ //    import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'ScopeAudience',
@@ -79411,6 +79421,7 @@ var render = function() {
               attrs: {
                 name: "approach",
                 editor: _vm.editor,
+                "upload-adapter": _vm.upload,
                 config: _vm.editorConfig,
                 placeholder: "Approach text here ...",
                 id: "approach"

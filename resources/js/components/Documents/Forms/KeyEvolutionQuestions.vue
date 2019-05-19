@@ -47,6 +47,7 @@
 
 <script>
     import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+//    import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
 
     export default {
         name: 'ScopeAudience',

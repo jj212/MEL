@@ -4,7 +4,7 @@
             <div class="form-group has-feedback has-feedback-left">
                 <label for="title">Approach</label>
 
-                <ckeditor name="approach" :editor="editor" v-model="document.approach.approach" :config="editorConfig" v-validate="'required|min:10'" placeholder="Approach text here ..." id="approach"></ckeditor>
+                <ckeditor name="approach" :editor="editor" :upload-adapter="upload" v-model="document.approach.approach" :config="editorConfig" v-validate="'required|min:10'" placeholder="Approach text here ..." id="approach"></ckeditor>
 
                 <!--<textarea name="title" v-model="document.approach.title" class="form-control" v-validate="'required|min:10'" placeholder="Approach title text here ..." id="title"></textarea>-->
                 <span v-if="errors.has('title')" class="text-danger">{{ errors.first('title') }}</span>
@@ -50,6 +50,11 @@
                     ],*/
             // The configuration of the editor.
 //                    toolbar: [ 'bold', 'italic', '|', 'link', 'fontFamily' ]
+                    toolbar: [ 'ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo' ],
+                    ckfinder: {
+                        uploadUrl: '/ckfinder/connector?command=QuickUpload&type=Files&responseType=json',
+//                        uploadUrl: '/api/ckfinder/image/upload',
+                    },
 
                 },
                 tabNo: this.currentTab,
@@ -72,6 +77,9 @@
             },
             deleteLevel(index) {
                 this.document.approach.levels.splice(index,1)
+            },
+            upload() {
+                alert('hhhh');
             }
         }
     }

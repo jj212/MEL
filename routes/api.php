@@ -15,16 +15,19 @@ use Illuminate\Http\Request;
 
 
 
+
 Route::group(['middleware' => 'api', 'namespace'=>'Api'], function ($router) {
     Route::post('login', 'Auth\AuthController@login');
     Route::post('register', 'Auth\AuthController@register');
 //    Route::post('forgot-password', 'Auth\AuthController@forgotPassword');
 
+    Route::post('ckfinder/image/upload', 'UploadsController@imageUpload');
 
     Route::group([ 'middleware'=>'jwt.auth'], function () {
         Route::get('me', 'Auth\AuthController@me');
         Route::post('logout', 'Auth\AuthController@logout');
         Route::get('refresh', 'Auth\AuthController@refresh');
+
 
 
         Route::post('documents', 'DocumentsController@store');

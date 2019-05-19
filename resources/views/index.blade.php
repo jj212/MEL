@@ -21,6 +21,10 @@
 <script type="text/javascript" src="/assets/js/plugins/ui/nicescroll.min.js"></script>
 <script type="text/javascript" src="/assets/js/plugins/ui/drilldown.js"></script>--}}
 <!-- /core JS files -->
+
+<script src="https://ckeditor.com/apps/ckfinder/3.4.5/ckfinder.js"></script>
+<script>CKFinder.config( { connectorPath: '/ckfinder/connector' } );</script>
+
 <script src="{{ mix('js/app.js') }}" type="text/javascript"></script>
 </body>
 </html>
