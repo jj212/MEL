@@ -20,8 +20,8 @@ class DocumentsController extends Controller
 {
     public function store(Request $request)
     {
-//        $html = $this->generatePdf();
-//        die();
+        $html = $this->convertToWord();
+        die();
         $document = new Document();
         $document->user_id = auth()->id();
         $document->approach = $request->approach['approach'];
@@ -145,4 +145,20 @@ class DocumentsController extends Controller
         return $path;
     }
 
+    public function convertToWord()
+    {
+
+        header("Content-Type: application/vnd.ms-word");
+        header("Expires: 0");
+        header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+        header("content-disposition: attachment;filename=Report.docx");
+
+        $html = file_get_contents(public_path().'/templates/template.html');
+
+        /*$handle = fopen(public_path().'/templates/word.docx', "w+");
+        fwrite($handle, $html);
+        fclose($handle);*/
+
+        echo $html;
+    }
 }

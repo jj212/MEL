@@ -3079,15 +3079,13 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _partials_ProgressBar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../partials/ProgressBar.vue */ "./resources/js/components/partials/ProgressBar.vue");
 /* harmony import */ var _Forms_Approach_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Forms/Approach.vue */ "./resources/js/components/Documents/Forms/Approach.vue");
-/* harmony import */ var _Forms_ApproachPrinciples_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Forms/ApproachPrinciples.vue */ "./resources/js/components/Documents/Forms/ApproachPrinciples.vue");
-/* harmony import */ var _Forms_ScopeAudience_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Forms/ScopeAudience.vue */ "./resources/js/components/Documents/Forms/ScopeAudience.vue");
-/* harmony import */ var _Forms_EthicalConsideration_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Forms/EthicalConsideration.vue */ "./resources/js/components/Documents/Forms/EthicalConsideration.vue");
-/* harmony import */ var _Forms_Limitations_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Forms/Limitations.vue */ "./resources/js/components/Documents/Forms/Limitations.vue");
-/* harmony import */ var _Forms_KeyEvolutionQuestions_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Forms/KeyEvolutionQuestions.vue */ "./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue");
-/* harmony import */ var _Forms_OperationalSteps_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Forms/OperationalSteps.vue */ "./resources/js/components/Documents/Forms/OperationalSteps.vue");
-/* harmony import */ var _Forms_MonitoringImprovement_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Forms/MonitoringImprovement.vue */ "./resources/js/components/Documents/Forms/MonitoringImprovement.vue");
-/* harmony import */ var _Forms_EvaluationPlan_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Forms/EvaluationPlan.vue */ "./resources/js/components/Documents/Forms/EvaluationPlan.vue");
-/* harmony import */ var _Forms_Complete_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Forms/Complete.vue */ "./resources/js/components/Documents/Forms/Complete.vue");
+/* harmony import */ var _Forms_ScopeAudience_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Forms/ScopeAudience.vue */ "./resources/js/components/Documents/Forms/ScopeAudience.vue");
+/* harmony import */ var _Forms_EthicalConsideration_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Forms/EthicalConsideration.vue */ "./resources/js/components/Documents/Forms/EthicalConsideration.vue");
+/* harmony import */ var _Forms_KeyEvolutionQuestions_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Forms/KeyEvolutionQuestions.vue */ "./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue");
+/* harmony import */ var _Forms_OperationalSteps_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Forms/OperationalSteps.vue */ "./resources/js/components/Documents/Forms/OperationalSteps.vue");
+/* harmony import */ var _Forms_MonitoringImprovement_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Forms/MonitoringImprovement.vue */ "./resources/js/components/Documents/Forms/MonitoringImprovement.vue");
+/* harmony import */ var _Forms_EvaluationPlan_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Forms/EvaluationPlan.vue */ "./resources/js/components/Documents/Forms/EvaluationPlan.vue");
+/* harmony import */ var _Forms_Complete_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Forms/Complete.vue */ "./resources/js/components/Documents/Forms/Complete.vue");
 //
 //
 //
@@ -3149,10 +3147,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+ //    import ApproachPrinciples from './Forms/ApproachPrinciples.vue'
 
 
-
-
+ //    import Limitations from './Forms/Limitations.vue'
 
 
 
@@ -3164,15 +3162,13 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     ProgressBar: _partials_ProgressBar_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     Approach: _Forms_Approach_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    ApproachPrinciples: _Forms_ApproachPrinciples_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    ScopeAudience: _Forms_ScopeAudience_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-    EthicalConsideration: _Forms_EthicalConsideration_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-    Limitations: _Forms_Limitations_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-    KeyEvolutionQuestions: _Forms_KeyEvolutionQuestions_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
-    OperationalSteps: _Forms_OperationalSteps_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
-    MonitoringImprovement: _Forms_MonitoringImprovement_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
-    EvaluationPlan: _Forms_EvaluationPlan_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
-    Complete: _Forms_Complete_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
+    ScopeAudience: _Forms_ScopeAudience_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    EthicalConsideration: _Forms_EthicalConsideration_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    KeyEvolutionQuestions: _Forms_KeyEvolutionQuestions_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    OperationalSteps: _Forms_OperationalSteps_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    MonitoringImprovement: _Forms_MonitoringImprovement_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+    EvaluationPlan: _Forms_EvaluationPlan_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+    Complete: _Forms_Complete_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
   },
   data: function data() {
     return {
@@ -3283,6 +3279,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
  //    import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 //    import FontPlugin from '@ckeditor/ckeditor5-font/src/font';
 //    import ParagraphPlugin from '@ckeditor/ckeditor5-paragraph/src/paragraph';
@@ -3349,82 +3351,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/ApproachPrinciples.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/ApproachPrinciples.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ckeditor/ckeditor5-build-classic */ "./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js");
-/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'ApproachPrinciples',
-  props: {
-    document: {
-      type: Object
-    },
-    currentTab: {
-      type: Number,
-      "default": function _default() {
-        return 1;
-      }
-    }
-  },
-  data: function data() {
-    return {
-      editor: _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0___default.a,
-      //  editorData: '<p>Content of the editor.</p>',
-      editorConfig: {// The configuration of the editor.
-      },
-      tabNo: this.currentTab
-    };
-  },
-  methods: {
-    approachPrinciplesForm: function approachPrinciplesForm() {
-      var _this = this;
-
-      this.$validator.validateAll().then(function (result) {
-        if (result) {
-          _this.tabNo += 1;
-
-          _this.$emit('tabChanged', _this.tabNo);
-
-          _this.$emit('docChanged', _this.document);
-        }
-      });
-    },
-    back: function back() {
-      this.tabNo -= 1;
-      this.$emit('tabChanged', this.tabNo);
-    }
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/Complete.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/Complete.vue?vue&type=script&lang=js& ***!
@@ -3477,6 +3403,12 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ckeditor/ckeditor5-build-classic */ "./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js");
 /* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3712,82 +3644,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     keyEvolutionForm: function keyEvolutionForm() {
-      var _this = this;
-
-      this.$validator.validateAll().then(function (result) {
-        if (result) {
-          _this.tabNo += 1;
-
-          _this.$emit('tabChanged', _this.tabNo);
-
-          _this.$emit('docChanged', _this.document);
-        }
-      });
-    },
-    back: function back() {
-      this.tabNo -= 1;
-      this.$emit('tabChanged', this.tabNo);
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/Limitations.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/Limitations.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ckeditor/ckeditor5-build-classic */ "./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js");
-/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Limitations',
-  props: {
-    document: {
-      type: Object
-    },
-    currentTab: {
-      type: Number,
-      "default": function _default() {
-        return 1;
-      }
-    }
-  },
-  data: function data() {
-    return {
-      editor: _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0___default.a,
-      //  editorData: '<p>Content of the editor.</p>',
-      editorConfig: {// The configuration of the editor.
-      },
-      tabNo: this.currentTab
-    };
-  },
-  methods: {
-    limitationForm: function limitationForm() {
       var _this = this;
 
       this.$validator.validateAll().then(function (result) {
@@ -79561,19 +79417,6 @@ var render = function() {
                       : _vm._e(),
                     _vm._v(" "),
                     _vm.currentTab == 2
-                      ? _c("Approach-Principles", {
-                          attrs: {
-                            document: _vm.document,
-                            currentTab: _vm.currentTab
-                          },
-                          on: {
-                            docChanged: _vm.handleDocument,
-                            tabChanged: _vm.handleCurrentTab
-                          }
-                        })
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _vm.currentTab == 3
                       ? _c("Scope-Audience", {
                           attrs: {
                             document: _vm.document,
@@ -79586,21 +79429,8 @@ var render = function() {
                         })
                       : _vm._e(),
                     _vm._v(" "),
-                    _vm.currentTab == 4
+                    _vm.currentTab == 3
                       ? _c("Ethical-Consideration", {
-                          attrs: {
-                            document: _vm.document,
-                            currentTab: _vm.currentTab
-                          },
-                          on: {
-                            docChanged: _vm.handleDocument,
-                            tabChanged: _vm.handleCurrentTab
-                          }
-                        })
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _vm.currentTab == 5
-                      ? _c("Limitations", {
                           attrs: {
                             document: _vm.document,
                             currentTab: _vm.currentTab
@@ -79742,7 +79572,6 @@ var render = function() {
               attrs: {
                 name: "approach",
                 editor: _vm.editor,
-                "upload-adapter": _vm.upload,
                 config: _vm.editorConfig,
                 placeholder: "Approach text here ...",
                 id: "approach"
@@ -79765,59 +79594,6 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _vm._m(0)
-      ]
-    )
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group text-center" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-        [_vm._v("Next")]
-      )
-    ])
-  }
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/ApproachPrinciples.vue?vue&type=template&id=e6188afe&":
-/*!*************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/ApproachPrinciples.vue?vue&type=template&id=e6188afe& ***!
-  \*************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-md-12" }, [
-    _c(
-      "form",
-      {
-        staticClass: "form-horizontal",
-        on: {
-          submit: function($event) {
-            $event.preventDefault()
-            return _vm.approachPrinciplesForm($event)
-          }
-        }
-      },
-      [
         _c(
           "div",
           { staticClass: "form-group has-feedback has-feedback-left" },
@@ -79860,28 +79636,25 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _c("div", { staticClass: "form-group text-center" }, [
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-info",
-              attrs: { type: "button" },
-              on: { click: _vm.back }
-            },
-            [_vm._v("Back")]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-            [_vm._v("Next")]
-          )
-        ])
+        _vm._m(0)
       ]
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group text-center" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+        [_vm._v("Next")]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -80007,6 +79780,48 @@ var render = function() {
             _vm.errors.has("ethicalconsideration")
               ? _c("span", { staticClass: "text-danger" }, [
                   _vm._v(_vm._s(_vm.errors.first("ethicalconsideration")))
+                ])
+              : _vm._e()
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "form-group has-feedback has-feedback-left" },
+          [
+            _c("label", { attrs: { for: "limitation" } }, [
+              _vm._v("Limitations")
+            ]),
+            _vm._v(" "),
+            _c("ckeditor", {
+              directives: [
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: "required|min:10",
+                  expression: "'required|min:10'"
+                }
+              ],
+              attrs: {
+                name: "limitation",
+                editor: _vm.editor,
+                config: _vm.editorConfig,
+                placeholder: "Approach limitation text here ...",
+                id: "limitation"
+              },
+              model: {
+                value: _vm.document.approach.limitation,
+                callback: function($$v) {
+                  _vm.$set(_vm.document.approach, "limitation", $$v)
+                },
+                expression: "document.approach.limitation"
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.has("limitation")
+              ? _c("span", { staticClass: "text-danger" }, [
+                  _vm._v(_vm._s(_vm.errors.first("limitation")))
                 ])
               : _vm._e()
           ],
@@ -80358,104 +80173,6 @@ var staticRenderFns = [
     ])
   }
 ]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/Limitations.vue?vue&type=template&id=1b9611c7&":
-/*!******************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/Limitations.vue?vue&type=template&id=1b9611c7& ***!
-  \******************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-md-12" }, [
-    _c(
-      "form",
-      {
-        staticClass: "form-horizontal",
-        on: {
-          submit: function($event) {
-            $event.preventDefault()
-            return _vm.limitationForm($event)
-          }
-        }
-      },
-      [
-        _c(
-          "div",
-          { staticClass: "form-group has-feedback has-feedback-left" },
-          [
-            _c("label", { attrs: { for: "limitation" } }, [
-              _vm._v("Limitations")
-            ]),
-            _vm._v(" "),
-            _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
-              attrs: {
-                name: "limitation",
-                editor: _vm.editor,
-                config: _vm.editorConfig,
-                placeholder: "Approach scope audience text here ...",
-                id: "limitation"
-              },
-              model: {
-                value: _vm.document.approach.limitation,
-                callback: function($$v) {
-                  _vm.$set(_vm.document.approach, "limitation", $$v)
-                },
-                expression: "document.approach.limitation"
-              }
-            }),
-            _vm._v(" "),
-            _vm.errors.has("limitation")
-              ? _c("span", { staticClass: "text-danger" }, [
-                  _vm._v(_vm._s(_vm.errors.first("limitation")))
-                ])
-              : _vm._e()
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group text-center" }, [
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-info",
-              attrs: { type: "button" },
-              on: { click: _vm.back }
-            },
-            [_vm._v("Back")]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-            [_vm._v("Next")]
-          )
-        ])
-      ]
-    )
-  ])
-}
-var staticRenderFns = []
 render._withStripped = true
 
 
@@ -81611,7 +81328,7 @@ var render = function() {
                         staticClass: "progress-indicator-tag-name",
                         class: { "progress-active": _vm.currentTab == 2 }
                       },
-                      [_vm._v("Principles")]
+                      [_vm._v("Scope Audience")]
                     )
                   ]
                 )
@@ -97164,75 +96881,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/Documents/Forms/ApproachPrinciples.vue":
-/*!************************************************************************!*\
-  !*** ./resources/js/components/Documents/Forms/ApproachPrinciples.vue ***!
-  \************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ApproachPrinciples_vue_vue_type_template_id_e6188afe___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ApproachPrinciples.vue?vue&type=template&id=e6188afe& */ "./resources/js/components/Documents/Forms/ApproachPrinciples.vue?vue&type=template&id=e6188afe&");
-/* harmony import */ var _ApproachPrinciples_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ApproachPrinciples.vue?vue&type=script&lang=js& */ "./resources/js/components/Documents/Forms/ApproachPrinciples.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _ApproachPrinciples_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _ApproachPrinciples_vue_vue_type_template_id_e6188afe___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _ApproachPrinciples_vue_vue_type_template_id_e6188afe___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/Documents/Forms/ApproachPrinciples.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/Documents/Forms/ApproachPrinciples.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************!*\
-  !*** ./resources/js/components/Documents/Forms/ApproachPrinciples.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ApproachPrinciples_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ApproachPrinciples.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/ApproachPrinciples.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ApproachPrinciples_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/Documents/Forms/ApproachPrinciples.vue?vue&type=template&id=e6188afe&":
-/*!*******************************************************************************************************!*\
-  !*** ./resources/js/components/Documents/Forms/ApproachPrinciples.vue?vue&type=template&id=e6188afe& ***!
-  \*******************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ApproachPrinciples_vue_vue_type_template_id_e6188afe___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ApproachPrinciples.vue?vue&type=template&id=e6188afe& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/ApproachPrinciples.vue?vue&type=template&id=e6188afe&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ApproachPrinciples_vue_vue_type_template_id_e6188afe___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ApproachPrinciples_vue_vue_type_template_id_e6188afe___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
 /***/ "./resources/js/components/Documents/Forms/Complete.vue":
 /*!**************************************************************!*\
   !*** ./resources/js/components/Documents/Forms/Complete.vue ***!
@@ -97522,75 +97170,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_KeyEvolutionQuestions_vue_vue_type_template_id_ab149102___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_KeyEvolutionQuestions_vue_vue_type_template_id_ab149102___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/components/Documents/Forms/Limitations.vue":
-/*!*****************************************************************!*\
-  !*** ./resources/js/components/Documents/Forms/Limitations.vue ***!
-  \*****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Limitations_vue_vue_type_template_id_1b9611c7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Limitations.vue?vue&type=template&id=1b9611c7& */ "./resources/js/components/Documents/Forms/Limitations.vue?vue&type=template&id=1b9611c7&");
-/* harmony import */ var _Limitations_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Limitations.vue?vue&type=script&lang=js& */ "./resources/js/components/Documents/Forms/Limitations.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Limitations_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Limitations_vue_vue_type_template_id_1b9611c7___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Limitations_vue_vue_type_template_id_1b9611c7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/Documents/Forms/Limitations.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/Documents/Forms/Limitations.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************!*\
-  !*** ./resources/js/components/Documents/Forms/Limitations.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Limitations_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Limitations.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/Limitations.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Limitations_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/Documents/Forms/Limitations.vue?vue&type=template&id=1b9611c7&":
-/*!************************************************************************************************!*\
-  !*** ./resources/js/components/Documents/Forms/Limitations.vue?vue&type=template&id=1b9611c7& ***!
-  \************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Limitations_vue_vue_type_template_id_1b9611c7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Limitations.vue?vue&type=template&id=1b9611c7& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/Limitations.vue?vue&type=template&id=1b9611c7&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Limitations_vue_vue_type_template_id_1b9611c7___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Limitations_vue_vue_type_template_id_1b9611c7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

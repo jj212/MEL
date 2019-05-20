@@ -28,10 +28,10 @@
                                 </div>
                                 <div class="panel-body">
                                     <Approach v-if="currentTab == 1" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Approach>
-                                    <Approach-Principles v-if="currentTab == 2" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Approach-Principles>
-                                    <Scope-Audience v-if="currentTab == 3" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Scope-Audience>
-                                    <Ethical-Consideration v-if="currentTab == 4" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Ethical-Consideration>
-                                    <Limitations v-if="currentTab == 5" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Limitations>
+                                    <!--<Approach-Principles v-if="currentTab == 2" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Approach-Principles>-->
+                                    <Scope-Audience v-if="currentTab == 2" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Scope-Audience>
+                                    <Ethical-Consideration v-if="currentTab == 3" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Ethical-Consideration>
+                                    <!--<Limitations v-if="currentTab == 5" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Limitations>-->
                                     <KeyEvolution-Questions v-if="currentTab == 6" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></KeyEvolution-Questions>
                                     <Operational-Steps v-if="currentTab == 7" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Operational-Steps>
                                     <Monitoring-Improvement v-if="currentTab == 8" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Monitoring-Improvement>
@@ -61,10 +61,10 @@
 <script>
     import ProgressBar from '../partials/ProgressBar.vue'
     import Approach from './Forms/Approach.vue'
-    import ApproachPrinciples from './Forms/ApproachPrinciples.vue'
+//    import ApproachPrinciples from './Forms/ApproachPrinciples.vue'
     import ScopeAudience from './Forms/ScopeAudience.vue'
     import EthicalConsideration from './Forms/EthicalConsideration.vue'
-    import Limitations from './Forms/Limitations.vue'
+//    import Limitations from './Forms/Limitations.vue'
     import KeyEvolutionQuestions from './Forms/KeyEvolutionQuestions.vue'
     import OperationalSteps from './Forms/OperationalSteps.vue'
     import MonitoringImprovement from './Forms/MonitoringImprovement.vue'
@@ -76,10 +76,8 @@
         components: {
             ProgressBar,
             Approach,
-            ApproachPrinciples,
             ScopeAudience,
             EthicalConsideration,
-            Limitations,
             KeyEvolutionQuestions,
             OperationalSteps,
             MonitoringImprovement,

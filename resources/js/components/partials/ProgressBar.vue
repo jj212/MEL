@@ -16,7 +16,7 @@
                         <div class="progress-indicator-tag-wrapper" style="left: 120px; top: -9px;">
                             <div v-bind:class="(currentTab > 2)?'progress-indicator-tag-complete':'progress-indicator-tag'" class="progress-indicator-tag">
                                 <div class="progress-indicator-tag-circle"></div>
-                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 2}">Principles</div>
+                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 2}">Scope Audience</div>
                             </div>
                         </div>
                         <div class="progress-indicator-tag-wrapper" style="left: 250px; top: -9px;">

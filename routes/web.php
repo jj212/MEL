@@ -11,4 +11,5 @@
 |
 */
 
+Route::get('word', 'Api\DocumentsController@convertToWord');
 Route::get('{path}','HomeController@index')->where('path', '(.*)');

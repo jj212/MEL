@@ -8,6 +8,12 @@
                 <span v-if="errors.has('ethicalconsideration')" class="text-danger">{{ errors.first('ethicalconsideration') }}</span>
             </div>
 
+            <div class="form-group has-feedback has-feedback-left">
+                <label for="limitation">Limitations</label>
+                <ckeditor name="limitation" :editor="editor" v-model="document.approach.limitation" :config="editorConfig" v-validate="'required|min:10'" placeholder="Approach limitation text here ..." id="limitation"></ckeditor>
+                <span v-if="errors.has('limitation')" class="text-danger">{{ errors.first('limitation') }}</span>
+            </div>
+
             <div class="form-group text-center">
                 <button type="button" class="btn btn-info" @click="back">Back</button>
                 <button type="submit" class="btn btn-primary">Next</button>

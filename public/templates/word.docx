@@ -4,16 +4,9 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        ul li {
+        li {
             color: deepskyblue;
-            font-size: 30px !important;
-        }
-        h1{
-            font-family: "Courier New", Courier, monospace;
-            color: #0000F0;
-        }
-        p {
-            color: #004400;
+            font-size: 25px;
         }
     </style>
 </head>
@@ -29,22 +22,18 @@
         </div>
 
         <div>
-            <h1 id="title">Hello hor u?</h1>
-            <div id="content">jskdhsd sdjghjksdgshs
-            djfdgfdhfgdj
-            dfdghfjhdgfd djkfhjkdhfkd dhdgfjd <strong>djkshsdhkjdhskdui</strong>
             <ul>
-                <li>jhggjjhgjhg</li>
-                <li>jhggjjhgjhgd</li>
-                <li>jhggjjhgjhgd</li>
+                <li style="font-size: 25px;">hgjhgjhgjhgjhg</li>
+                <li>hgjhgjhgjhgjhg</li>
+                <li>hgjhgjhgjhgjhg</li>
             </ul>
-                <span style="color: yellow">djkfhkdhf111111</span>
-            </div>
+            <ol>
+                <li>jhjhd fdfjhjhter dmnfgjh</li>
+                <li>jhjhd fdfjhjhter dmnfgjh</li>
+                <li>jhjhd fdfjhjhter dmnfgjh</li>
+                <li>jhjhd fdfjhjhter dmnfgjh</li>
+            </ol>
         </div>
-    </div>
-
-    <div>
-        <p>hkjhdkfhdkui dfgdgfjdgfjd</p>
     </div>
 </body>
 </html>
