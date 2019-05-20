@@ -1,10 +1,10 @@
 <template>
-    <div class="col-md-9 page ab-test">
+    <div class="col-md-12 page ab-test">
         <div class="section-progress-block">
             <div class="container">
                 <div class="progress-block">
                     <div class="progress-indicator">
-                        <div style="width:922px;" class="progress-bar">
+                        <div style="width:1182px;" class="progress-bar">
                             <div style="width:0%;" class="progress-bar-value"></div>
                         </div>
                         <div class="progress-indicator-tag-wrapper" style="left: -10px; top: -9px;">
@@ -52,7 +52,19 @@
                         <div class="progress-indicator-tag-wrapper" style="left: 920px; top: -9px;">
                             <div v-bind:class="(currentTab > 8)?'progress-indicator-tag-complete':'progress-indicator-tag'" class="progress-indicator-tag">
                                 <div class="progress-indicator-tag-circle"></div>
-                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 8}">Complete</div>
+                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 8}">Improvements</div>
+                            </div>
+                        </div>
+                        <div class="progress-indicator-tag-wrapper" style="left: 1050px; top: -9px;">
+                            <div v-bind:class="(currentTab > 9)?'progress-indicator-tag-complete':'progress-indicator-tag'" class="progress-indicator-tag">
+                                <div class="progress-indicator-tag-circle"></div>
+                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 9}">Plan & Reporting</div>
+                            </div>
+                        </div>
+                        <div class="progress-indicator-tag-wrapper" style="left: 1180px; top: -9px;">
+                            <div v-bind:class="(currentTab > 10)?'progress-indicator-tag-complete':'progress-indicator-tag'" class="progress-indicator-tag">
+                                <div class="progress-indicator-tag-circle"></div>
+                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 10}">Complete</div>
                             </div>
                         </div>
                     </div>

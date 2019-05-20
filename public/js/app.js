@@ -3085,7 +3085,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Forms_Limitations_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Forms/Limitations.vue */ "./resources/js/components/Documents/Forms/Limitations.vue");
 /* harmony import */ var _Forms_KeyEvolutionQuestions_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Forms/KeyEvolutionQuestions.vue */ "./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue");
 /* harmony import */ var _Forms_OperationalSteps_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Forms/OperationalSteps.vue */ "./resources/js/components/Documents/Forms/OperationalSteps.vue");
-/* harmony import */ var _Forms_Complete_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Forms/Complete.vue */ "./resources/js/components/Documents/Forms/Complete.vue");
+/* harmony import */ var _Forms_MonitoringImprovement_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Forms/MonitoringImprovement.vue */ "./resources/js/components/Documents/Forms/MonitoringImprovement.vue");
+/* harmony import */ var _Forms_EvaluationPlan_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Forms/EvaluationPlan.vue */ "./resources/js/components/Documents/Forms/EvaluationPlan.vue");
+/* harmony import */ var _Forms_Complete_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Forms/Complete.vue */ "./resources/js/components/Documents/Forms/Complete.vue");
 //
 //
 //
@@ -3144,6 +3146,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+
+
 
 
 
@@ -3164,7 +3170,9 @@ __webpack_require__.r(__webpack_exports__);
     Limitations: _Forms_Limitations_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
     KeyEvolutionQuestions: _Forms_KeyEvolutionQuestions_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
     OperationalSteps: _Forms_OperationalSteps_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
-    Complete: _Forms_Complete_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
+    MonitoringImprovement: _Forms_MonitoringImprovement_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+    EvaluationPlan: _Forms_EvaluationPlan_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
+    Complete: _Forms_Complete_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   },
   data: function data() {
     return {
@@ -3199,7 +3207,10 @@ __webpack_require__.r(__webpack_exports__);
             question: '',
             subQuestion: ''
           }],
-          operational_steps: ''
+          operational_steps: '',
+          monitoring_improvement: '',
+          evaluation_plan: '',
+          reporting: ''
         }
       },
       generatedDoc: {},
@@ -3215,7 +3226,7 @@ __webpack_require__.r(__webpack_exports__);
     handleCurrentTab: function handleCurrentTab(event) {
       this.currentTab = event;
 
-      if (this.currentTab == 8) {
+      if (this.currentTab == 10) {
         this.generateDocument();
       }
     },
@@ -3530,6 +3541,93 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/EvaluationPlan.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/EvaluationPlan.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ckeditor/ckeditor5-build-classic */ "./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js");
+/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'EvaluationPlan',
+  props: {
+    document: {
+      type: Object
+    },
+    currentTab: {
+      type: Number,
+      "default": function _default() {
+        return 1;
+      }
+    }
+  },
+  data: function data() {
+    return {
+      editor: _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0___default.a,
+      //  editorData: '<p>Content of the editor.</p>',
+      editorConfig: {
+        // The configuration of the editor.
+        toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'ckfinder', 'imageUpload', 'blockQuote', 'insertTable', 'fontFamily', 'undo', 'redo'],
+        ckfinder: {
+          uploadUrl: '/ckfinder/connector?command=QuickUpload&type=Files&responseType=json' //                        uploadUrl: '/api/ckfinder/image/upload',
+
+        }
+      },
+      tabNo: this.currentTab
+    };
+  },
+  methods: {
+    evaluationPlan: function evaluationPlan() {
+      var _this = this;
+
+      this.$validator.validateAll().then(function (result) {
+        if (result) {
+          _this.tabNo += 1;
+
+          _this.$emit('tabChanged', _this.tabNo);
+
+          _this.$emit('docChanged', _this.document);
+        }
+      });
+    },
+    back: function back() {
+      this.tabNo -= 1;
+      this.$emit('tabChanged', this.tabNo);
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=script&lang=js& ***!
@@ -3711,6 +3809,87 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/MonitoringImprovement.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/MonitoringImprovement.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ckeditor/ckeditor5-build-classic */ "./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js");
+/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'MonitoringImprovement',
+  props: {
+    document: {
+      type: Object
+    },
+    currentTab: {
+      type: Number,
+      "default": function _default() {
+        return 1;
+      }
+    }
+  },
+  data: function data() {
+    return {
+      editor: _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0___default.a,
+      //  editorData: '<p>Content of the editor.</p>',
+      editorConfig: {
+        // The configuration of the editor.
+        toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'ckfinder', 'imageUpload', 'blockQuote', 'insertTable', 'fontFamily', 'undo', 'redo'],
+        ckfinder: {
+          uploadUrl: '/ckfinder/connector?command=QuickUpload&type=Files&responseType=json' //                        uploadUrl: '/api/ckfinder/image/upload',
+
+        }
+      },
+      tabNo: this.currentTab
+    };
+  },
+  methods: {
+    monitoringForm: function monitoringForm() {
+      var _this = this;
+
+      this.$validator.validateAll().then(function (result) {
+        if (result) {
+          _this.tabNo += 1;
+
+          _this.$emit('tabChanged', _this.tabNo);
+
+          _this.$emit('docChanged', _this.document);
+        }
+      });
+    },
+    back: function back() {
+      this.tabNo -= 1;
+      this.$emit('tabChanged', this.tabNo);
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/OperationalSteps.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/OperationalSteps.vue?vue&type=script&lang=js& ***!
@@ -3760,7 +3939,7 @@ __webpack_require__.r(__webpack_exports__);
       //  editorData: '<p>Content of the editor.</p>',
       editorConfig: {
         // The configuration of the editor.
-        toolbar: ['ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo'],
+        toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'ckfinder', 'imageUpload', 'blockQuote', 'insertTable', 'fontFamily', 'undo', 'redo'],
         ckfinder: {
           uploadUrl: '/ckfinder/connector?command=QuickUpload&type=Files&responseType=json' //                        uploadUrl: '/api/ckfinder/image/upload',
 
@@ -4222,6 +4401,18 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -35935,7 +36126,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*=============Progress===============*/\n.page.ab-test .section-progress-block[data-v-352f1158] {\n    height: 55px;\n    margin-top: 25px;\n}\n.page.ab-test div[data-v-352f1158] {\n    display: block !important;\n}\n.page.ab-test .section-progress-block>.container[data-v-352f1158] {\n    margin: 0 auto;\n    max-width: 100%;\n    box-sizing: border-box;\n    height: 100%;\n    display: flex;\n}\n.page.ab-test .section-progress-block>.container .progress-block[data-v-352f1158] {\n    width: 80%;\n    height: inherit;\n    position: relative;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n}\n.page.ab-test .section-progress-block>.container .progress-block .progress-indicator[data-v-352f1158] {\n    position: absolute;\n    left: 50%;\n    top: 54%;\n    -webkit-transform: translate(-50%, -50%);\n    transform: translate(-50%, -50%);\n}\n.page.ab-test .progress-bar[data-v-352f1158] {\n    position: relative;\n    height: 3px;\n    z-index: 0;\n}\n.page.ab-test .progress-bar .progress-bar-value[data-v-352f1158] {\n    height: 100%;\n    background: #2996CC;\n    transition: all 0.4s ease-in-out;\n}\n.page.ab-test .progress-indicator .progress-indicator-tag-wrapper[data-v-352f1158] {\n    position: absolute;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-current[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 18px;\n    height: 18px;\n    border: 1px solid silver;\n    border-radius: 50% !important;\n    margin: 0 auto;\n    /*cursor: pointer;*/\n    background: white;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 16px;\n    height: 16px;\n    border: 2px solid #f69768;\n}\n.page.ab-test .progress-indicator-tag .progress-indicator-tag-name[data-v-352f1158] {\n    position: absolute;\n    font-family: \"Open Sans\",\"Helvetica Neue\",Arial,Helvetica,Verdana,sans-serif;\n    font-weight: normal;\n    font-size: 14px;\n    color: #C0C0C0;\n    top: -20px;\n    white-space: nowrap;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n    letter-spacing: 0.5px;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-name[data-v-352f1158] {\n    font-weight: bold;\n    color: #F69768;\n}\n.page.ab-test .progress-indicator-tag .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 18px;\n    height: 18px;\n    border: 1px solid silver;\n    border-radius: 50% !important;\n    margin: 0 auto;\n    /*cursor: pointer;*/\n    background: white;\n}\n.page.ab-test .progress-indicator-tag[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-complete[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-complete .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 20px;\n    height: 20px;\n    border: 0px solid transparent;\n    border-radius: 50% !important;\n    background-color: #2996CC;\n    background-image: url(https://app.legaltemplates.net/assets/icon_progress_bar_checked-1fb8d38d25c32ee9c61fe566ebd77868.png);\n    background-repeat: no-repeat;\n    background-position: center;\n    margin: 0 auto;\n}\n.page.ab-test .progress-indicator-tag-complete .progress-indicator-tag-name[data-v-352f1158] {\n    position: absolute;\n    font-family: \"Open Sans\",\"Helvetica Neue\",Arial,Helvetica,Verdana,sans-serif;\n    font-size: 14px;\n    top: -20px;\n    white-space: nowrap;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n    letter-spacing: 0.5px;\n    font-weight: bold;\n    color: #2996CC;\n}\n.page.ab-test .progress-bar[data-v-352f1158]::before {\n    position: absolute;\n    display: block;\n    content: \" \";\n    background: #C0C0C0;\n    top: 1px;\n    height: 1px;\n    width: 100%;\n    z-index: -1;\n}\n.progress-active[data-v-352f1158] {\n    color: green !important;\n    font-weight: 600 !important;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*=============Progress===============*/\n.page.ab-test .section-progress-block[data-v-352f1158] {\n    height: 55px;\n    margin-top: 25px;\n}\n.page.ab-test div[data-v-352f1158] {\n    display: block !important;\n}\n.page.ab-test .section-progress-block>.container[data-v-352f1158] {\n    margin: 0 auto;\n    max-width: 100%;\n    box-sizing: border-box;\n    height: 100%;\n    display: flex;\n}\n.page.ab-test .section-progress-block>.container .progress-block[data-v-352f1158] {\n    width: 80%;\n    height: inherit;\n    position: relative;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n}\n.page.ab-test .section-progress-block>.container .progress-block .progress-indicator[data-v-352f1158] {\n    position: absolute;\n    left: 50%;\n    top: 54%;\n    -webkit-transform: translate(-50%, -50%);\n    transform: translate(-50%, -50%);\n}\n.page.ab-test .progress-bar[data-v-352f1158] {\n    position: relative;\n    height: 3px;\n    z-index: 0;\n}\n.page.ab-test .progress-bar .progress-bar-value[data-v-352f1158] {\n    height: 100%;\n    background: #2996CC;\n    transition: all 0.4s ease-in-out;\n}\n.page.ab-test .progress-indicator .progress-indicator-tag-wrapper[data-v-352f1158] {\n    position: absolute;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-current[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 18px;\n    height: 18px;\n    border: 1px solid silver;\n    border-radius: 50% !important;\n    margin: 0 auto;\n    /*cursor: pointer;*/\n    background: white;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 16px;\n    height: 16px;\n    border: 2px solid #f69768;\n}\n.page.ab-test .progress-indicator-tag .progress-indicator-tag-name[data-v-352f1158] {\n    position: absolute;\n    font-family: \"Open Sans\",\"Helvetica Neue\",Arial,Helvetica,Verdana,sans-serif;\n    font-weight: normal;\n    font-size: 14px;\n    color: #C0C0C0;\n    top: -20px;\n    white-space: nowrap;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n    letter-spacing: 0.5px;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-name[data-v-352f1158] {\n    font-weight: bold;\n    color: #F69768;\n}\n.page.ab-test .progress-indicator-tag .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 18px;\n    height: 18px;\n    border: 1px solid silver;\n    border-radius: 50% !important;\n    margin: 0 auto;\n    /*cursor: pointer;*/\n    background: white;\n}\n.page.ab-test .progress-indicator-tag[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-complete[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-complete .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 20px;\n    height: 20px;\n    border: 0px solid transparent;\n    border-radius: 50% !important;\n    background-color: #2996CC;\n    background-image: url(https://app.legaltemplates.net/assets/icon_progress_bar_checked-1fb8d38d25c32ee9c61fe566ebd77868.png);\n    background-repeat: no-repeat;\n    background-position: center;\n    margin: 0 auto;\n}\n.page.ab-test .progress-indicator-tag-complete .progress-indicator-tag-name[data-v-352f1158] {\n    position: absolute;\n    font-family: \"Open Sans\",\"Helvetica Neue\",Arial,Helvetica,Verdana,sans-serif;\n    font-size: 14px;\n    top: -20px;\n    white-space: nowrap;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n    letter-spacing: 0.5px;\n    font-weight: bold;\n    color: #2996CC;\n}\n.page.ab-test .progress-bar[data-v-352f1158]::before {\n    position: absolute;\n    display: block;\n    content: \" \";\n    background: #C0C0C0;\n    top: 1px;\n    height: 1px;\n    width: 100%;\n    z-index: -1;\n}\n.progress-active[data-v-352f1158] {\n    color: green !important;\n    font-weight: 600 !important;\n}\n", ""]);
 
 // exports
 
@@ -79447,7 +79638,33 @@ var render = function() {
                         })
                       : _vm._e(),
                     _vm._v(" "),
-                    _vm.currentTab == 8 && _vm.generatedDoc
+                    _vm.currentTab == 8
+                      ? _c("Monitoring-Improvement", {
+                          attrs: {
+                            document: _vm.document,
+                            currentTab: _vm.currentTab
+                          },
+                          on: {
+                            docChanged: _vm.handleDocument,
+                            tabChanged: _vm.handleCurrentTab
+                          }
+                        })
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.currentTab == 9
+                      ? _c("Evaluation-Plan", {
+                          attrs: {
+                            document: _vm.document,
+                            currentTab: _vm.currentTab
+                          },
+                          on: {
+                            docChanged: _vm.handleDocument,
+                            tabChanged: _vm.handleCurrentTab
+                          }
+                        })
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.currentTab == 10 && _vm.generatedDoc.path
                       ? _c("Complete", {
                           attrs: { document: _vm.generatedDoc }
                         })
@@ -79824,6 +80041,144 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/EvaluationPlan.vue?vue&type=template&id=6cb5d672&":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/EvaluationPlan.vue?vue&type=template&id=6cb5d672& ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "col-md-12" }, [
+    _c(
+      "form",
+      {
+        staticClass: "form-horizontal",
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            return _vm.evaluationPlan($event)
+          }
+        }
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "form-group has-feedback has-feedback-left" },
+          [
+            _c("label", { attrs: { for: "evaluation_plan" } }, [
+              _vm._v("Evaluation Plan")
+            ]),
+            _vm._v(" "),
+            _c("ckeditor", {
+              directives: [
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: "required|min:10",
+                  expression: "'required|min:10'"
+                }
+              ],
+              attrs: {
+                name: "evaluation_plan",
+                editor: _vm.editor,
+                config: _vm.editorConfig,
+                placeholder: "Evaluation Plan text here ...",
+                id: "evaluation_plan"
+              },
+              model: {
+                value: _vm.document.approach.evaluation_plan,
+                callback: function($$v) {
+                  _vm.$set(_vm.document.approach, "evaluation_plan", $$v)
+                },
+                expression: "document.approach.evaluation_plan"
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.has("evaluation_plan")
+              ? _c("span", { staticClass: "text-danger" }, [
+                  _vm._v(_vm._s(_vm.errors.first("evaluation_plan")))
+                ])
+              : _vm._e()
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "form-group has-feedback has-feedback-left" },
+          [
+            _c("label", { attrs: { for: "reporting" } }, [_vm._v("Reporting")]),
+            _vm._v(" "),
+            _c("ckeditor", {
+              directives: [
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: "required|min:10",
+                  expression: "'required|min:10'"
+                }
+              ],
+              attrs: {
+                name: "reporting",
+                editor: _vm.editor,
+                config: _vm.editorConfig,
+                placeholder: "Reporting text here ...",
+                id: "reporting"
+              },
+              model: {
+                value: _vm.document.approach.reporting,
+                callback: function($$v) {
+                  _vm.$set(_vm.document.approach, "reporting", $$v)
+                },
+                expression: "document.approach.reporting"
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.has("reporting")
+              ? _c("span", { staticClass: "text-danger" }, [
+                  _vm._v(_vm._s(_vm.errors.first("reporting")))
+                ])
+              : _vm._e()
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group text-center" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-info",
+              attrs: { type: "button" },
+              on: { click: _vm.back }
+            },
+            [_vm._v("Back")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+            [_vm._v("Next")]
+          )
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=template&id=ab149102&":
 /*!****************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue?vue&type=template&id=ab149102& ***!
@@ -80073,6 +80428,105 @@ var render = function() {
             _vm.errors.has("limitation")
               ? _c("span", { staticClass: "text-danger" }, [
                   _vm._v(_vm._s(_vm.errors.first("limitation")))
+                ])
+              : _vm._e()
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group text-center" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-info",
+              attrs: { type: "button" },
+              on: { click: _vm.back }
+            },
+            [_vm._v("Back")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+            [_vm._v("Next")]
+          )
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/MonitoringImprovement.vue?vue&type=template&id=3f1ff79c&":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Documents/Forms/MonitoringImprovement.vue?vue&type=template&id=3f1ff79c& ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "col-md-12" }, [
+    _c(
+      "form",
+      {
+        staticClass: "form-horizontal",
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            return _vm.monitoringForm($event)
+          }
+        }
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "form-group has-feedback has-feedback-left" },
+          [
+            _c("label", { attrs: { for: "m_improvement" } }, [
+              _vm._v("Monitoring and Continuous Improvement")
+            ]),
+            _vm._v(" "),
+            _c("ckeditor", {
+              directives: [
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: "required|min:10",
+                  expression: "'required|min:10'"
+                }
+              ],
+              attrs: {
+                name: "m_improvement",
+                editor: _vm.editor,
+                config: _vm.editorConfig,
+                placeholder:
+                  "Monitoring and Continuous Improvement text here ...",
+                id: "m_improvement"
+              },
+              model: {
+                value: _vm.document.approach.monitoring_improvement,
+                callback: function($$v) {
+                  _vm.$set(_vm.document.approach, "monitoring_improvement", $$v)
+                },
+                expression: "document.approach.monitoring_improvement"
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.has("m_improvement")
+              ? _c("span", { staticClass: "text-danger" }, [
+                  _vm._v(_vm._s(_vm.errors.first("m_improvement")))
                 ])
               : _vm._e()
           ],
@@ -81093,7 +81547,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-md-9 page ab-test" }, [
+  return _c("div", { staticClass: "col-md-12 page ab-test" }, [
     _c("div", { staticClass: "section-progress-block" }, [
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "progress-block" }, [
@@ -81349,6 +81803,70 @@ var render = function() {
                         staticClass: "progress-indicator-tag-name",
                         class: { "progress-active": _vm.currentTab == 8 }
                       },
+                      [_vm._v("Improvements")]
+                    )
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "progress-indicator-tag-wrapper",
+                staticStyle: { left: "1050px", top: "-9px" }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "progress-indicator-tag",
+                    class:
+                      _vm.currentTab > 9
+                        ? "progress-indicator-tag-complete"
+                        : "progress-indicator-tag"
+                  },
+                  [
+                    _c("div", { staticClass: "progress-indicator-tag-circle" }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "progress-indicator-tag-name",
+                        class: { "progress-active": _vm.currentTab == 9 }
+                      },
+                      [_vm._v("Plan & Reporting")]
+                    )
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "progress-indicator-tag-wrapper",
+                staticStyle: { left: "1180px", top: "-9px" }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "progress-indicator-tag",
+                    class:
+                      _vm.currentTab > 10
+                        ? "progress-indicator-tag-complete"
+                        : "progress-indicator-tag"
+                  },
+                  [
+                    _c("div", { staticClass: "progress-indicator-tag-circle" }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "progress-indicator-tag-name",
+                        class: { "progress-active": _vm.currentTab == 10 }
+                      },
                       [_vm._v("Complete")]
                     )
                   ]
@@ -81368,7 +81886,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "progress-bar", staticStyle: { width: "922px" } },
+      { staticClass: "progress-bar", staticStyle: { width: "1182px" } },
       [
         _c("div", {
           staticClass: "progress-bar-value",
@@ -96853,6 +97371,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Documents/Forms/EvaluationPlan.vue":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Documents/Forms/EvaluationPlan.vue ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EvaluationPlan_vue_vue_type_template_id_6cb5d672___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EvaluationPlan.vue?vue&type=template&id=6cb5d672& */ "./resources/js/components/Documents/Forms/EvaluationPlan.vue?vue&type=template&id=6cb5d672&");
+/* harmony import */ var _EvaluationPlan_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EvaluationPlan.vue?vue&type=script&lang=js& */ "./resources/js/components/Documents/Forms/EvaluationPlan.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _EvaluationPlan_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EvaluationPlan_vue_vue_type_template_id_6cb5d672___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EvaluationPlan_vue_vue_type_template_id_6cb5d672___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Documents/Forms/EvaluationPlan.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Documents/Forms/EvaluationPlan.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/components/Documents/Forms/EvaluationPlan.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EvaluationPlan_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./EvaluationPlan.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/EvaluationPlan.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EvaluationPlan_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Documents/Forms/EvaluationPlan.vue?vue&type=template&id=6cb5d672&":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/components/Documents/Forms/EvaluationPlan.vue?vue&type=template&id=6cb5d672& ***!
+  \***************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EvaluationPlan_vue_vue_type_template_id_6cb5d672___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./EvaluationPlan.vue?vue&type=template&id=6cb5d672& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/EvaluationPlan.vue?vue&type=template&id=6cb5d672&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EvaluationPlan_vue_vue_type_template_id_6cb5d672___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EvaluationPlan_vue_vue_type_template_id_6cb5d672___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue":
 /*!***************************************************************************!*\
   !*** ./resources/js/components/Documents/Forms/KeyEvolutionQuestions.vue ***!
@@ -97004,6 +97591,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Limitations_vue_vue_type_template_id_1b9611c7___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Limitations_vue_vue_type_template_id_1b9611c7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Documents/Forms/MonitoringImprovement.vue":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Documents/Forms/MonitoringImprovement.vue ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _MonitoringImprovement_vue_vue_type_template_id_3f1ff79c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MonitoringImprovement.vue?vue&type=template&id=3f1ff79c& */ "./resources/js/components/Documents/Forms/MonitoringImprovement.vue?vue&type=template&id=3f1ff79c&");
+/* harmony import */ var _MonitoringImprovement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MonitoringImprovement.vue?vue&type=script&lang=js& */ "./resources/js/components/Documents/Forms/MonitoringImprovement.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _MonitoringImprovement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _MonitoringImprovement_vue_vue_type_template_id_3f1ff79c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _MonitoringImprovement_vue_vue_type_template_id_3f1ff79c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Documents/Forms/MonitoringImprovement.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Documents/Forms/MonitoringImprovement.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/components/Documents/Forms/MonitoringImprovement.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MonitoringImprovement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./MonitoringImprovement.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/MonitoringImprovement.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MonitoringImprovement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Documents/Forms/MonitoringImprovement.vue?vue&type=template&id=3f1ff79c&":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/components/Documents/Forms/MonitoringImprovement.vue?vue&type=template&id=3f1ff79c& ***!
+  \**********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MonitoringImprovement_vue_vue_type_template_id_3f1ff79c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./MonitoringImprovement.vue?vue&type=template&id=3f1ff79c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Documents/Forms/MonitoringImprovement.vue?vue&type=template&id=3f1ff79c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MonitoringImprovement_vue_vue_type_template_id_3f1ff79c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MonitoringImprovement_vue_vue_type_template_id_3f1ff79c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

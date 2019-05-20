@@ -1,11 +1,17 @@
 <template>
     <div class="col-md-12">
-        <form class="form-horizontal" @submit.prevent="operationalForm">
+        <form class="form-horizontal" @submit.prevent="evaluationPlan">
 
             <div class="form-group has-feedback has-feedback-left">
-                <label for="operational_steps">How the operational components of the MERI framework fit together</label>
-                <ckeditor name="operational_steps" :editor="editor" v-model="document.approach.operational_steps" :config="editorConfig" v-validate="'required|min:10'" placeholder="Approach scope audience text here ..." id="operational_steps"></ckeditor>
-                <span v-if="errors.has('operational_steps')" class="text-danger">{{ errors.first('operational_steps') }}</span>
+                <label for="evaluation_plan">Evaluation Plan</label>
+                <ckeditor name="evaluation_plan" :editor="editor" v-model="document.approach.evaluation_plan" :config="editorConfig" v-validate="'required|min:10'" placeholder="Evaluation Plan text here ..." id="evaluation_plan"></ckeditor>
+                <span v-if="errors.has('evaluation_plan')" class="text-danger">{{ errors.first('evaluation_plan') }}</span>
+            </div>
+
+            <div class="form-group has-feedback has-feedback-left">
+                <label for="reporting">Reporting</label>
+                <ckeditor name="reporting" :editor="editor" v-model="document.approach.reporting" :config="editorConfig" v-validate="'required|min:10'" placeholder="Reporting text here ..." id="reporting"></ckeditor>
+                <span v-if="errors.has('reporting')" class="text-danger">{{ errors.first('reporting') }}</span>
             </div>
 
             <div class="form-group text-center">
@@ -20,7 +26,7 @@
     import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
     export default {
-        name: 'Limitations',
+        name: 'EvaluationPlan',
         props: {
             document: {
                 type: Object,
@@ -48,7 +54,7 @@
             }
         },
         methods: {
-            operationalForm: function () {
+            evaluationPlan: function () {
                 this.$validator.validateAll().
                         then((result) => {
                     if(result) {

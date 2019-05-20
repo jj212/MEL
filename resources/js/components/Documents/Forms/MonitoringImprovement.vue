@@ -1,11 +1,11 @@
 <template>
     <div class="col-md-12">
-        <form class="form-horizontal" @submit.prevent="operationalForm">
+        <form class="form-horizontal" @submit.prevent="monitoringForm">
 
             <div class="form-group has-feedback has-feedback-left">
-                <label for="operational_steps">How the operational components of the MERI framework fit together</label>
-                <ckeditor name="operational_steps" :editor="editor" v-model="document.approach.operational_steps" :config="editorConfig" v-validate="'required|min:10'" placeholder="Approach scope audience text here ..." id="operational_steps"></ckeditor>
-                <span v-if="errors.has('operational_steps')" class="text-danger">{{ errors.first('operational_steps') }}</span>
+                <label for="m_improvement">Monitoring and Continuous Improvement</label>
+                <ckeditor name="m_improvement" :editor="editor" v-model="document.approach.monitoring_improvement" :config="editorConfig" v-validate="'required|min:10'" placeholder="Monitoring and Continuous Improvement text here ..." id="m_improvement"></ckeditor>
+                <span v-if="errors.has('m_improvement')" class="text-danger">{{ errors.first('m_improvement') }}</span>
             </div>
 
             <div class="form-group text-center">
@@ -20,7 +20,7 @@
     import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
     export default {
-        name: 'Limitations',
+        name: 'MonitoringImprovement',
         props: {
             document: {
                 type: Object,
@@ -48,7 +48,7 @@
             }
         },
         methods: {
-            operationalForm: function () {
+            monitoringForm: function () {
                 this.$validator.validateAll().
                         then((result) => {
                     if(result) {

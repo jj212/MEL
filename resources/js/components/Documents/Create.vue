@@ -34,7 +34,9 @@
                                     <Limitations v-if="currentTab == 5" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Limitations>
                                     <KeyEvolution-Questions v-if="currentTab == 6" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></KeyEvolution-Questions>
                                     <Operational-Steps v-if="currentTab == 7" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Operational-Steps>
-                                    <Complete v-if="currentTab == 8 && generatedDoc" :document="generatedDoc"></Complete>
+                                    <Monitoring-Improvement v-if="currentTab == 8" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Monitoring-Improvement>
+                                    <Evaluation-Plan v-if="currentTab == 9" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Evaluation-Plan>
+                                    <Complete v-if="currentTab == 10 && generatedDoc.path" :document="generatedDoc"></Complete>
                                 </div>
                             </div>
                             <!-- /marketing campaigns -->
@@ -65,6 +67,8 @@
     import Limitations from './Forms/Limitations.vue'
     import KeyEvolutionQuestions from './Forms/KeyEvolutionQuestions.vue'
     import OperationalSteps from './Forms/OperationalSteps.vue'
+    import MonitoringImprovement from './Forms/MonitoringImprovement.vue'
+    import EvaluationPlan from './Forms/EvaluationPlan.vue'
     import Complete from './Forms/Complete.vue'
 
     export default {
@@ -78,6 +82,8 @@
             Limitations,
             KeyEvolutionQuestions,
             OperationalSteps,
+            MonitoringImprovement,
+            EvaluationPlan,
             Complete
         },
         data () {
@@ -101,7 +107,10 @@
                             {criteria:'Sustainability', question:'', subQuestion:''},
                             {criteria:'Appropriateness', question:'', subQuestion:''}
                         ],
-                        operational_steps:''
+                        operational_steps:'',
+                        monitoring_improvement:'',
+                        evaluation_plan:'',
+                        reporting:''
                     },
                 },
                 generatedDoc:{},
@@ -116,7 +125,7 @@
             },
             handleCurrentTab (event) {
                 this.currentTab = event;
-                if(this.currentTab == 8) {
+                if(this.currentTab == 10) {
                     this.generateDocument();
                 }
             },

@@ -177,7 +177,9 @@ return [
 
 
         Barryvdh\DomPDF\ServiceProvider::class,
-        GrofGraf\LaravelPDFMerger\Providers\PDFMergerServiceProvider::class
+        Webklex\PDFMerger\Providers\PDFMergerServiceProvider::class,
+
+        
 
     ],
 
@@ -231,7 +233,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'PDF' => Barryvdh\DomPDF\Facade::class,
-        'PDFMerger' => GrofGraf\LaravelPDFMerger\Facades\PDFMergerFacade::class
+        'PDFMerger' => Webklex\PDFMerger\Facades\PDFMergerFacade::class
+        
 
     ],
 

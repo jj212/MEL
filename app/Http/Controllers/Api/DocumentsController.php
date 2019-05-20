@@ -9,12 +9,12 @@ use Barryvdh\DomPDF\Facade as PDF;
 use Dompdf\Dompdf;
 use Dompdf\Options;
 
-use GrofGraf\LaravelPDFMerger\Facades\PDFMergerFacade;
-use GrofGraf\LaravelPDFMerger\PDFMerger;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use PhpOffice\PhpWord\TemplateProcessor;
 //use RobbieP\CloudConvertLaravel\Facades\CloudConvert;
+use Webklex\PDFMerger\Facades\PDFMergerFacade as PDFMerger;
+
 
 class DocumentsController extends Controller
 {
@@ -120,12 +120,27 @@ class DocumentsController extends Controller
         $output = $dompdf->output();
         file_put_contents(public_path().'/'.$path, $output);*/
 
-        $merger = new PDFMerger();
-        $merger = $merger->init();
-        $merger->addPathToPDF(public_path('templates/1st_part_copy.pdf'), 'all', 'P');
-//        $merger->addPDFString(file_get_contents(base_path('/vendor/grofgraf/laravel-pdf-merger/examples/two.pdf')), 'all', 'L');
-        $merger->merge();
-        $merger->save(public_path().'/'.$path);
+        /*$pdfMerger = PDFMerger::init(); //Initialize the merger
+
+        $pdfMerger->addPDF(public_path('templates/1st_part_copy.pdf'), 'all');
+        $pdfMerger->addPDF(public_path().'/'.$path, 'all');
+
+        $pdfMerger->merge(); //For a normal merge (No blank page added)
+
+
+
+        $pdfMerger->save(public_path().'/'.$path);
+
+*/
+       /* $oMerger = PDFMerger::init();
+
+        $oMerger->addPDF(public_path('templates/1st_part_copy.pdf'), [2]);
+        $oMerger->addPDF(public_path().'/'.$path, 'all');
+
+        $oMerger->merge();
+        $oMerger->save(public_path().'/'.$path);*/
+
+        
 
         return $path;
     }

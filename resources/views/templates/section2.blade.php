@@ -201,6 +201,30 @@
 
 {!! $data['approach']['operational_steps'] !!}
 
+<ol class="c3 lst-kix_erkl8hua5q61-1 start" start="2">
+   <li class="c40 c22" style="text-indent: 0">
+      <h2 style="display:inline"><span class="c5">Monitoring and Continuous Improvement </span></h2>
+   </li>
+</ol>
+
+{!! $data['approach']['monitoring_improvement'] !!}
+
+<ol class="c3 lst-kix_erkl8hua5q61-1 start" start="3">
+   <li class="c40 c22" style="text-indent: 0">
+      <h2 style="display:inline"><span class="c5">Evaluation Plan </span></h2>
+   </li>
+</ol>
+
+{!! $data['approach']['evaluation_plan'] !!}
+
+<ol class="c3 lst-kix_erkl8hua5q61-1 start" start="4">
+   <li class="c40 c22" style="text-indent: 0">
+      <h2 style="display:inline"><span class="c5">Reporting </span></h2>
+   </li>
+</ol>
+
+{!! $data['approach']['reporting'] !!}
+
 
 
 </body>

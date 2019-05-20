@@ -13,12 +13,12 @@
         "ckfinder/ckfinder-laravel-package": "v3.4.5.1",
         "dompdf/dompdf": "^0.8.3",
         "fideloper/proxy": "^4.0",
-        "grofgraf/laravel-pdf-merger": "^1.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
         "phpoffice/phpword": "^0.16.0",
         "rkorebrits/htmltoopenxml": "^0.1.9",
-        "tymon/jwt-auth": "dev-develop"
+        "tymon/jwt-auth": "dev-develop",
+        "webklex/laravel-pdfmerger": "^1.1"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
