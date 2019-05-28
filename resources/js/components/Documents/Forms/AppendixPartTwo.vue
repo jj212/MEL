@@ -3,27 +3,27 @@
         <form class="form-horizontal" @submit.prevent="monitoringForm">
 
             <div class="form-group has-feedback has-feedback-left">
-                <label for="appendix_one">Appendix 1: Program logic</label>
-                <ckeditor name="appendix_one" :editor="editor" v-model="document.approach.appendix_one" :config="editorConfig" v-validate="'required|min:10'" placeholder="Monitoring and Continuous Improvement text here ..." id="appendix_one"></ckeditor>
-                <span v-if="errors.has('appendix_one')" class="text-danger">{{ errors.first('appendix_one') }}</span>
+                <label for="appendix_five">Appendix 5: Monitoring plan matrix</label>
+                <ckeditor name="appendix_five" :editor="editor" v-model="document.approach.appendix_five" :config="editorConfig" v-validate="'required|min:10'" placeholder="Monitoring and Continuous Improvement text here ..." id="appendix_five"></ckeditor>
+                <span v-if="errors.has('appendix_five')" class="text-danger">{{ errors.first('appendix_five') }}</span>
             </div>
 
             <div class="form-group has-feedback has-feedback-left">
-                <label for="appendix_two">Appendix 2: Theory of change</label>
-                <ckeditor name="appendix_two" :editor="editor" v-model="document.approach.appendix_two" :config="editorConfig" v-validate="'required|min:10'" placeholder="Monitoring and Continuous Improvement text here ..." id="appendix_two"></ckeditor>
-                <span v-if="errors.has('appendix_two')" class="text-danger">{{ errors.first('appendix_two') }}</span>
+                <label for="appendix_six">Appendix 6: Monitoring data collection & analysis plan</label>
+                <ckeditor name="appendix_six" :editor="editor" v-model="document.approach.appendix_six" :config="editorConfig" v-validate="'required|min:10'" placeholder="Monitoring and Continuous Improvement text here ..." id="appendix_six"></ckeditor>
+                <span v-if="errors.has('appendix_six')" class="text-danger">{{ errors.first('appendix_six') }}</span>
             </div>
 
             <div class="form-group has-feedback has-feedback-left">
-                <label for="appendix_three">Appendix 3: Rubric for Business Resilience</label>
-                <ckeditor name="appendix_three" :editor="editor" v-model="document.approach.appendix_three" :config="editorConfig" v-validate="'required|min:10'" placeholder="Monitoring and Continuous Improvement text here ..." id="appendix_three"></ckeditor>
-                <span v-if="errors.has('appendix_three')" class="text-danger">{{ errors.first('appendix_three') }}</span>
+                <label for="appendix_seven">Appendix 7: Evaluation plan matrix</label>
+                <ckeditor name="appendix_seven" :editor="editor" v-model="document.approach.appendix_seven" :config="editorConfig" v-validate="'required|min:10'" placeholder="Monitoring and Continuous Improvement text here ..." id="appendix_seven"></ckeditor>
+                <span v-if="errors.has('appendix_seven')" class="text-danger">{{ errors.first('appendix_seven') }}</span>
             </div>
 
             <div class="form-group has-feedback has-feedback-left">
-                <label for="appendix_four">Appendix 4: Prospective timeline</label>
-                <ckeditor name="appendix_four" :editor="editor" v-model="document.approach.appendix_four" :config="editorConfig" v-validate="'required|min:10'" placeholder="Monitoring and Continuous Improvement text here ..." id="appendix_four"></ckeditor>
-                <span v-if="errors.has('appendix_four')" class="text-danger">{{ errors.first('appendix_four') }}</span>
+                <label for="appendix_eight">Appendix 8: Evaluation Data Collection Matrix</label>
+                <ckeditor name="appendix_eight" :editor="editor" v-model="document.approach.appendix_eight" :config="editorConfig" v-validate="'required|min:10'" placeholder="Monitoring and Continuous Improvement text here ..." id="appendix_eight"></ckeditor>
+                <span v-if="errors.has('appendix_eight')" class="text-danger">{{ errors.first('appendix_eight') }}</span>
             </div>
 
 
@@ -39,7 +39,7 @@
     import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
     export default {
-        name: 'AppendixPartOne',
+        name: 'AppendixPartTwo',
         props: {
             document: {
                 type: Object,

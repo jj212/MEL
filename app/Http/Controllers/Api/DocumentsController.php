@@ -168,6 +168,15 @@ class DocumentsController extends Controller
         $html = str_replace('##{evaluation_plan_text}##',$data['approach']['evaluation_plan'],$html);
         $html = str_replace('##{reporting_text}##',$data['approach']['reporting'],$html);
 
+        $html = str_replace('##{appendix_one}##',$data['approach']['appendix_one'],$html);
+        $html = str_replace('##{appendix_two}##',$data['approach']['appendix_two'],$html);
+        $html = str_replace('##{appendix_three}##',$data['approach']['appendix_three'],$html);
+        $html = str_replace('##{appendix_four}##',$data['approach']['appendix_four'],$html);
+        $html = str_replace('##{appendix_five}##',$data['approach']['appendix_five'],$html);
+        $html = str_replace('##{appendix_six}##',$data['approach']['appendix_six'],$html);
+        $html = str_replace('##{appendix_seven}##',$data['approach']['appendix_seven'],$html);
+        $html = str_replace('##{appendix_eight}##',$data['approach']['appendix_eight'],$html);
+
         $html = str_replace('##{public_path}##','/var/www/html/sunhill/M_AND_E/public',$html);
 
         $path = 'exports/'.time().'_Final_M_AND_E_Framework_YFBP.docx';

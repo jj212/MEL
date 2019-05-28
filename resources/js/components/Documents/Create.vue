@@ -35,8 +35,11 @@
                                     <KeyEvolution-Questions v-if="currentTab == 4" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></KeyEvolution-Questions>
                                     <!--<Operational-Steps v-if="currentTab == 7" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Operational-Steps>-->
                                     <Monitoring-Improvement v-if="currentTab == 5" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Monitoring-Improvement>
+
+                                    <Appendix-Part-One v-if="currentTab == 6" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Appendix-Part-One>
+                                    <Appendix-Part-Two v-if="currentTab == 7" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Appendix-Part-Two>
                                     <!--<Evaluation-Plan v-if="currentTab == 9" :document="document" :currentTab="currentTab" @docChanged="handleDocument" @tabChanged="handleCurrentTab"></Evaluation-Plan>-->
-                                    <Complete v-if="currentTab == 6 && generatedDoc.path" :document="generatedDoc"></Complete>
+                                    <Complete v-if="currentTab == 8 && generatedDoc.path" :document="generatedDoc"></Complete>
                                 </div>
                             </div>
                             <!-- /marketing campaigns -->
@@ -68,6 +71,9 @@
     import KeyEvolutionQuestions from './Forms/KeyEvolutionQuestions.vue'
 //    import OperationalSteps from './Forms/OperationalSteps.vue'
     import MonitoringImprovement from './Forms/MonitoringImprovement.vue'
+
+    import AppendixPartOne from './Forms/AppendixPartOne.vue'
+    import AppendixPartTwo from './Forms/AppendixPartTwo.vue'
 //    import EvaluationPlan from './Forms/EvaluationPlan.vue'
     import Complete from './Forms/Complete.vue'
 
@@ -80,6 +86,8 @@
             EthicalConsideration,
             KeyEvolutionQuestions,
             MonitoringImprovement,
+            AppendixPartOne,
+            AppendixPartTwo,
             Complete
         },
         data () {
@@ -106,7 +114,15 @@
                         operational_steps:'',
                         monitoring_improvement:'',
                         evaluation_plan:'',
-                        reporting:''
+                        reporting:'',
+                        appendix_one:'',
+                        appendix_two:'',
+                        appendix_three:'',
+                        appendix_four:'',
+                        appendix_five:'',
+                        appendix_six:'',
+                        appendix_seven:'',
+                        appendix_eight:'',
                     },
                 },
                 generatedDoc:{},
@@ -121,7 +137,7 @@
             },
             handleCurrentTab (event) {
                 this.currentTab = event;
-                if(this.currentTab == 6) {
+                if(this.currentTab == 8) {
                     this.generateDocument();
                 }
             },
