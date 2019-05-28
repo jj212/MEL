@@ -155,10 +155,10 @@ class DocumentsController extends Controller
 
         $html = file_get_contents(public_path().'/templates/final_test.html');
 
-        $handle = fopen(public_path().'/templates/word.docx', "w+");
+       /* $handle = fopen(public_path().'/templates/word.docx', "w+");
         fwrite($handle, $html);
-        fclose($handle);
+        fclose($handle);*/
 
-        return $html;
+        echo $html;
     }
 }
