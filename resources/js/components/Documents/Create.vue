@@ -66,9 +66,9 @@
     import EthicalConsideration from './Forms/EthicalConsideration.vue'
 //    import Limitations from './Forms/Limitations.vue'
     import KeyEvolutionQuestions from './Forms/KeyEvolutionQuestions.vue'
-    import OperationalSteps from './Forms/OperationalSteps.vue'
+//    import OperationalSteps from './Forms/OperationalSteps.vue'
     import MonitoringImprovement from './Forms/MonitoringImprovement.vue'
-    import EvaluationPlan from './Forms/EvaluationPlan.vue'
+//    import EvaluationPlan from './Forms/EvaluationPlan.vue'
     import Complete from './Forms/Complete.vue'
 
     export default {
@@ -79,9 +79,7 @@
             ScopeAudience,
             EthicalConsideration,
             KeyEvolutionQuestions,
-            OperationalSteps,
             MonitoringImprovement,
-            EvaluationPlan,
             Complete
         },
         data () {
