@@ -153,12 +153,12 @@ class DocumentsController extends Controller
         header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
         header("content-disposition: attachment;filename=Report.docx");
 
-        $html = file_get_contents(public_path().'/templates/template.html');
+        $html = file_get_contents(public_path().'/templates/final_test.html');
 
-        /*$handle = fopen(public_path().'/templates/word.docx', "w+");
+        $handle = fopen(public_path().'/templates/word.docx', "w+");
         fwrite($handle, $html);
-        fclose($handle);*/
+        fclose($handle);
 
-        echo $html;
+        return $html;
     }
 }

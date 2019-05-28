@@ -8,6 +8,18 @@
                 <span v-if="errors.has('m_improvement')" class="text-danger">{{ errors.first('m_improvement') }}</span>
             </div>
 
+            <div class="form-group has-feedback has-feedback-left">
+                <label for="evaluation_plan">Evaluation Plan</label>
+                <ckeditor name="evaluation_plan" :editor="editor" v-model="document.approach.evaluation_plan" :config="editorConfig" v-validate="'required|min:10'" placeholder="Evaluation Plan text here ..." id="evaluation_plan"></ckeditor>
+                <span v-if="errors.has('evaluation_plan')" class="text-danger">{{ errors.first('evaluation_plan') }}</span>
+            </div>
+
+            <div class="form-group has-feedback has-feedback-left">
+                <label for="reporting">Reporting</label>
+                <ckeditor name="reporting" :editor="editor" v-model="document.approach.reporting" :config="editorConfig" v-validate="'required|min:10'" placeholder="Reporting text here ..." id="reporting"></ckeditor>
+                <span v-if="errors.has('reporting')" class="text-danger">{{ errors.first('reporting') }}</span>
+            </div>
+
             <div class="form-group text-center">
                 <button type="button" class="btn btn-info" @click="back">Back</button>
                 <button type="submit" class="btn btn-primary">Next</button>

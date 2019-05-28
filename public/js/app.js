@@ -3222,7 +3222,7 @@ __webpack_require__.r(__webpack_exports__);
     handleCurrentTab: function handleCurrentTab(event) {
       this.currentTab = event;
 
-      if (this.currentTab == 10) {
+      if (this.currentTab == 6) {
         this.generateDocument();
       }
     },
@@ -3618,6 +3618,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
  //    import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3676,6 +3682,18 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ckeditor/ckeditor5-build-classic */ "./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js");
 /* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4257,12 +4275,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -35982,7 +35994,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*=============Progress===============*/\n.page.ab-test .section-progress-block[data-v-352f1158] {\n    height: 55px;\n    margin-top: 25px;\n}\n.page.ab-test div[data-v-352f1158] {\n    display: block !important;\n}\n.page.ab-test .section-progress-block>.container[data-v-352f1158] {\n    margin: 0 auto;\n    max-width: 100%;\n    box-sizing: border-box;\n    height: 100%;\n    display: flex;\n}\n.page.ab-test .section-progress-block>.container .progress-block[data-v-352f1158] {\n    width: 80%;\n    height: inherit;\n    position: relative;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n}\n.page.ab-test .section-progress-block>.container .progress-block .progress-indicator[data-v-352f1158] {\n    position: absolute;\n    left: 50%;\n    top: 54%;\n    -webkit-transform: translate(-50%, -50%);\n    transform: translate(-50%, -50%);\n}\n.page.ab-test .progress-bar[data-v-352f1158] {\n    position: relative;\n    height: 3px;\n    z-index: 0;\n}\n.page.ab-test .progress-bar .progress-bar-value[data-v-352f1158] {\n    height: 100%;\n    background: #2996CC;\n    transition: all 0.4s ease-in-out;\n}\n.page.ab-test .progress-indicator .progress-indicator-tag-wrapper[data-v-352f1158] {\n    position: absolute;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-current[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 18px;\n    height: 18px;\n    border: 1px solid silver;\n    border-radius: 50% !important;\n    margin: 0 auto;\n    /*cursor: pointer;*/\n    background: white;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 16px;\n    height: 16px;\n    border: 2px solid #f69768;\n}\n.page.ab-test .progress-indicator-tag .progress-indicator-tag-name[data-v-352f1158] {\n    position: absolute;\n    font-family: \"Open Sans\",\"Helvetica Neue\",Arial,Helvetica,Verdana,sans-serif;\n    font-weight: normal;\n    font-size: 14px;\n    color: #C0C0C0;\n    top: -20px;\n    white-space: nowrap;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n    letter-spacing: 0.5px;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-name[data-v-352f1158] {\n    font-weight: bold;\n    color: #F69768;\n}\n.page.ab-test .progress-indicator-tag .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 18px;\n    height: 18px;\n    border: 1px solid silver;\n    border-radius: 50% !important;\n    margin: 0 auto;\n    /*cursor: pointer;*/\n    background: white;\n}\n.page.ab-test .progress-indicator-tag[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-complete[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-complete .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 20px;\n    height: 20px;\n    border: 0px solid transparent;\n    border-radius: 50% !important;\n    background-color: #2996CC;\n    background-image: url(https://app.legaltemplates.net/assets/icon_progress_bar_checked-1fb8d38d25c32ee9c61fe566ebd77868.png);\n    background-repeat: no-repeat;\n    background-position: center;\n    margin: 0 auto;\n}\n.page.ab-test .progress-indicator-tag-complete .progress-indicator-tag-name[data-v-352f1158] {\n    position: absolute;\n    font-family: \"Open Sans\",\"Helvetica Neue\",Arial,Helvetica,Verdana,sans-serif;\n    font-size: 14px;\n    top: -20px;\n    white-space: nowrap;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n    letter-spacing: 0.5px;\n    font-weight: bold;\n    color: #2996CC;\n}\n.page.ab-test .progress-bar[data-v-352f1158]::before {\n    position: absolute;\n    display: block;\n    content: \" \";\n    background: #C0C0C0;\n    top: 1px;\n    height: 1px;\n    width: 100%;\n    z-index: -1;\n}\n.progress-active[data-v-352f1158] {\n    color: green !important;\n    font-weight: 600 !important;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*=============Progress===============*/\n.page.ab-test .section-progress-block[data-v-352f1158] {\n    height: 55px;\n    margin-top: 25px;\n}\n.page.ab-test div[data-v-352f1158] {\n    display: block !important;\n}\n.page.ab-test .section-progress-block>.container[data-v-352f1158] {\n    margin: 0 auto;\n    max-width: 100%;\n    box-sizing: border-box;\n    height: 100%;\n    display: flex;\n}\n.page.ab-test .section-progress-block>.container .progress-block[data-v-352f1158] {\n    width: 80%;\n    height: inherit;\n    position: relative;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n}\n.page.ab-test .section-progress-block>.container .progress-block .progress-indicator[data-v-352f1158] {\n    position: absolute;\n    left: 50%;\n    top: 54%;\n    -webkit-transform: translate(-50%, -50%);\n    transform: translate(-50%, -50%);\n}\n.page.ab-test .progress-bar[data-v-352f1158] {\n    position: relative;\n    height: 3px;\n    z-index: 0;\n}\n.page.ab-test .progress-bar .progress-bar-value[data-v-352f1158] {\n    height: 100%;\n    background: #2996CC;\n    transition: all 0.4s ease-in-out;\n}\n.page.ab-test .progress-indicator .progress-indicator-tag-wrapper[data-v-352f1158] {\n    position: absolute;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-current[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 18px;\n    height: 18px;\n    border: 1px solid silver;\n    border-radius: 50% !important;\n    margin: 0 auto;\n    /*cursor: pointer;*/\n    background: white;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 16px;\n    height: 16px;\n    border: 2px solid #f69768;\n}\n.page.ab-test .progress-indicator-tag .progress-indicator-tag-name[data-v-352f1158] {\n    position: absolute;\n    font-family: \"Open Sans\",\"Helvetica Neue\",Arial,Helvetica,Verdana,sans-serif;\n    font-weight: normal;\n    font-size: 14px;\n    color: #C0C0C0;\n    top: -20px;\n    white-space: nowrap;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n    letter-spacing: 0.5px;\n}\n.page.ab-test .progress-indicator-tag-current .progress-indicator-tag-name[data-v-352f1158] {\n    font-weight: bold;\n    color: #F69768;\n}\n.page.ab-test .progress-indicator-tag .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 18px;\n    height: 18px;\n    border: 1px solid silver;\n    border-radius: 50% !important;\n    margin: 0 auto;\n    /*cursor: pointer;*/\n    background: white;\n}\n.page.ab-test .progress-indicator-tag[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-complete[data-v-352f1158] {\n    position: relative;\n    display: inline-flex;\n    flex-flow: column-reverse;\n    width: 20px;\n    height: 20px;\n}\n.page.ab-test .progress-indicator-tag-complete .progress-indicator-tag-circle[data-v-352f1158] {\n    width: 20px;\n    height: 20px;\n    border: 0px solid transparent;\n    border-radius: 50% !important;\n    background-color: #2996CC;\n    background-image: url(https://app.legaltemplates.net/assets/icon_progress_bar_checked-1fb8d38d25c32ee9c61fe566ebd77868.png);\n    background-repeat: no-repeat;\n    background-position: center;\n    margin: 0 auto;\n}\n.page.ab-test .progress-indicator-tag-complete .progress-indicator-tag-name[data-v-352f1158] {\n    position: absolute;\n    font-family: \"Open Sans\",\"Helvetica Neue\",Arial,Helvetica,Verdana,sans-serif;\n    font-size: 14px;\n    top: -20px;\n    white-space: nowrap;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n    letter-spacing: 0.5px;\n    font-weight: bold;\n    color: #2996CC;\n}\n.page.ab-test .progress-bar[data-v-352f1158]::before {\n    position: absolute;\n    display: block;\n    content: \" \";\n    background: #C0C0C0;\n    top: 1px;\n    height: 1px;\n    width: 100%;\n    z-index: -1;\n}\n.progress-active[data-v-352f1158] {\n    color: green !important;\n    font-weight: 600 !important;\n}\n", ""]);
 
 // exports
 
@@ -79442,7 +79454,7 @@ var render = function() {
                         })
                       : _vm._e(),
                     _vm._v(" "),
-                    _vm.currentTab == 6
+                    _vm.currentTab == 4
                       ? _c("KeyEvolution-Questions", {
                           attrs: {
                             document: _vm.document,
@@ -79455,20 +79467,7 @@ var render = function() {
                         })
                       : _vm._e(),
                     _vm._v(" "),
-                    _vm.currentTab == 7
-                      ? _c("Operational-Steps", {
-                          attrs: {
-                            document: _vm.document,
-                            currentTab: _vm.currentTab
-                          },
-                          on: {
-                            docChanged: _vm.handleDocument,
-                            tabChanged: _vm.handleCurrentTab
-                          }
-                        })
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _vm.currentTab == 8
+                    _vm.currentTab == 5
                       ? _c("Monitoring-Improvement", {
                           attrs: {
                             document: _vm.document,
@@ -79481,20 +79480,7 @@ var render = function() {
                         })
                       : _vm._e(),
                     _vm._v(" "),
-                    _vm.currentTab == 9
-                      ? _c("Evaluation-Plan", {
-                          attrs: {
-                            document: _vm.document,
-                            currentTab: _vm.currentTab
-                          },
-                          on: {
-                            docChanged: _vm.handleDocument,
-                            tabChanged: _vm.handleCurrentTab
-                          }
-                        })
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _vm.currentTab == 10 && _vm.generatedDoc.path
+                    _vm.currentTab == 6 && _vm.generatedDoc.path
                       ? _c("Complete", {
                           attrs: { document: _vm.generatedDoc }
                         })
@@ -80136,6 +80122,50 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "form-group has-feedback has-feedback-left" },
+          [
+            _c("label", { attrs: { for: "operational_steps" } }, [
+              _vm._v(
+                "How the operational components of the MERI framework fit together"
+              )
+            ]),
+            _vm._v(" "),
+            _c("ckeditor", {
+              directives: [
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: "required|min:10",
+                  expression: "'required|min:10'"
+                }
+              ],
+              attrs: {
+                name: "operational_steps",
+                editor: _vm.editor,
+                config: _vm.editorConfig,
+                placeholder: "Approach scope audience text here ...",
+                id: "operational_steps"
+              },
+              model: {
+                value: _vm.document.approach.operational_steps,
+                callback: function($$v) {
+                  _vm.$set(_vm.document.approach, "operational_steps", $$v)
+                },
+                expression: "document.approach.operational_steps"
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.has("operational_steps")
+              ? _c("span", { staticClass: "text-danger" }, [
+                  _vm._v(_vm._s(_vm.errors.first("operational_steps")))
+                ])
+              : _vm._e()
+          ],
+          1
+        ),
+        _vm._v(" "),
         _c("div", { staticClass: "form-group text-center" }, [
           _c(
             "button",
@@ -80244,6 +80274,88 @@ var render = function() {
             _vm.errors.has("m_improvement")
               ? _c("span", { staticClass: "text-danger" }, [
                   _vm._v(_vm._s(_vm.errors.first("m_improvement")))
+                ])
+              : _vm._e()
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "form-group has-feedback has-feedback-left" },
+          [
+            _c("label", { attrs: { for: "evaluation_plan" } }, [
+              _vm._v("Evaluation Plan")
+            ]),
+            _vm._v(" "),
+            _c("ckeditor", {
+              directives: [
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: "required|min:10",
+                  expression: "'required|min:10'"
+                }
+              ],
+              attrs: {
+                name: "evaluation_plan",
+                editor: _vm.editor,
+                config: _vm.editorConfig,
+                placeholder: "Evaluation Plan text here ...",
+                id: "evaluation_plan"
+              },
+              model: {
+                value: _vm.document.approach.evaluation_plan,
+                callback: function($$v) {
+                  _vm.$set(_vm.document.approach, "evaluation_plan", $$v)
+                },
+                expression: "document.approach.evaluation_plan"
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.has("evaluation_plan")
+              ? _c("span", { staticClass: "text-danger" }, [
+                  _vm._v(_vm._s(_vm.errors.first("evaluation_plan")))
+                ])
+              : _vm._e()
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "form-group has-feedback has-feedback-left" },
+          [
+            _c("label", { attrs: { for: "reporting" } }, [_vm._v("Reporting")]),
+            _vm._v(" "),
+            _c("ckeditor", {
+              directives: [
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: "required|min:10",
+                  expression: "'required|min:10'"
+                }
+              ],
+              attrs: {
+                name: "reporting",
+                editor: _vm.editor,
+                config: _vm.editorConfig,
+                placeholder: "Reporting text here ...",
+                id: "reporting"
+              },
+              model: {
+                value: _vm.document.approach.reporting,
+                callback: function($$v) {
+                  _vm.$set(_vm.document.approach, "reporting", $$v)
+                },
+                expression: "document.approach.reporting"
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.has("reporting")
+              ? _c("span", { staticClass: "text-danger" }, [
+                  _vm._v(_vm._s(_vm.errors.first("reporting")))
                 ])
               : _vm._e()
           ],
@@ -81360,7 +81472,7 @@ var render = function() {
                         staticClass: "progress-indicator-tag-name",
                         class: { "progress-active": _vm.currentTab == 3 }
                       },
-                      [_vm._v("Scope Audience")]
+                      [_vm._v("Ethical Considerations")]
                     )
                   ]
                 )
@@ -81391,38 +81503,6 @@ var render = function() {
                       {
                         staticClass: "progress-indicator-tag-name",
                         class: { "progress-active": _vm.currentTab == 4 }
-                      },
-                      [_vm._v("Ethical Considerations")]
-                    )
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "progress-indicator-tag-wrapper",
-                staticStyle: { left: "530px", top: "-9px" }
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass: "progress-indicator-tag",
-                    class:
-                      _vm.currentTab > 5
-                        ? "progress-indicator-tag-complete"
-                        : "progress-indicator-tag"
-                  },
-                  [
-                    _c("div", { staticClass: "progress-indicator-tag-circle" }),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "progress-indicator-tag-name",
-                        class: { "progress-active": _vm.currentTab == 5 }
                       },
                       [_vm._v("Limitations")]
                     )

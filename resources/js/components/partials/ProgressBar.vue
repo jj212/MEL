@@ -22,19 +22,13 @@
                         <div class="progress-indicator-tag-wrapper" style="left: 250px; top: -9px;">
                             <div v-bind:class="(currentTab > 3)?'progress-indicator-tag-complete':'progress-indicator-tag'" class="progress-indicator-tag">
                                 <div class="progress-indicator-tag-circle"></div>
-                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 3}">Scope Audience</div>
+                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 3}">Ethical Considerations</div>
                             </div>
                         </div>
                         <div class="progress-indicator-tag-wrapper" style="left: 400px; top: -9px;">
                             <div v-bind:class="(currentTab > 4)?'progress-indicator-tag-complete':'progress-indicator-tag'" class="progress-indicator-tag">
                                 <div class="progress-indicator-tag-circle"></div>
-                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 4}">Ethical Considerations</div>
-                            </div>
-                        </div>
-                        <div class="progress-indicator-tag-wrapper" style="left: 530px; top: -9px;">
-                            <div v-bind:class="(currentTab > 5)?'progress-indicator-tag-complete':'progress-indicator-tag'" class="progress-indicator-tag">
-                                <div class="progress-indicator-tag-circle"></div>
-                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 5}">Limitations</div>
+                                <div class="progress-indicator-tag-name" v-bind:class="{'progress-active': currentTab == 4}">Limitations</div>
                             </div>
                         </div>
                         <div class="progress-indicator-tag-wrapper" style="left: 660px; top: -9px;">
