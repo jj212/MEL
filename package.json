@@ -31,8 +31,10 @@
         "@ckeditor/ckeditor5-vue": "^1.0.0-beta.2",
         "@websanova/vue-auth": "^2.21.14-beta",
         "bootstrap-vue": "^2.0.0-rc.19",
+        "toastr": "^2.1.4",
         "vee-validate": "^2.2.6",
         "vue-axios": "^2.1.4",
-        "vue-router": "^3.0.6"
+        "vue-router": "^3.0.6",
+        "vue-toastr-2": "0.0.10"
     }
 }

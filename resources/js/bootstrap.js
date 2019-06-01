@@ -7,6 +7,10 @@ import VueAxios from 'vue-axios'
 import VeeValidate from 'vee-validate'
 import BootstrapVue from 'bootstrap-vue'
 import CKEditor from '@ckeditor/ckeditor5-vue';
+import VueToastr2 from 'vue-toastr-2'
+import 'vue-toastr-2/dist/vue-toastr-2.min.css'
+
+
 
 //import VueAuth from '@websanova/vue-auth'
 
@@ -23,6 +27,10 @@ Vue.use(VueAxios, axios);
 Vue.use(VeeValidate);
 Vue.use(BootstrapVue);
 Vue.use( CKEditor );
+
+window.toastr = require('toastr')
+
+Vue.use(VueToastr2)
 
 
 

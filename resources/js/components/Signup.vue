@@ -9,12 +9,12 @@
                     <!-- Main content -->
                     <div class="content-wrapper">
 
-                        <form class="form-horizontal" @submit.prevent="login">
+                        <form class="form-horizontal" @submit.prevent="signup">
 
                             <div class="panel panel-body login-form">
                                 <div class="text-center">
                                     <div class="icon-object border-slate-300 text-slate-300"><i class="icon-reading"></i></div>
-                                    <h5 class="content-group">Login <small class="display-block">Enter your credentials below</small></h5>
+                                    <h5 class="content-group">Signup <small class="display-block">Enter your credentials below</small></h5>
                                 </div>
 
                                 <div v-if="serverErrors.length">
@@ -25,11 +25,27 @@
                                     </b-alert>
                                 </div>
 
+                                <div class="form-group has-feedback has-feedback-left">
+                                    <input class="form-control" placeholder="First Name" type="text" name="first_name" v-model="user.first_name" autofocus v-validate="'required|min:3'">
+                                    <div class="form-control-feedback">
+                                        <i class="icon-user text-muted"></i>
+                                    </div>
+                                    <span v-if="errors.has('first_name')" class="text-danger">{{ errors.first('first_name') }}</span>
+                                </div>
+
+                                <div class="form-group has-feedback has-feedback-left">
+                                    <input class="form-control" placeholder="Last Name" type="text" name="last_name" v-model="user.last_name" autofocus v-validate="'required|min:3'">
+                                    <div class="form-control-feedback">
+                                        <i class="icon-user text-muted"></i>
+                                    </div>
+                                    <span v-if="errors.has('last_name')" class="text-danger">{{ errors.first('last_name') }}</span>
+                                </div>
+
 
                                 <div class="form-group has-feedback has-feedback-left">
                                     <input class="form-control" placeholder="Email" id="email" type="email" name="email" v-model="user.email" value="" autofocus v-validate="'required|email'">
                                     <div class="form-control-feedback">
-                                        <i class="icon-user text-muted"></i>
+                                        <i class="icon-envelope text-muted"></i>
                                     </div>
                                     <span v-if="errors.has('email')" class="text-danger">{{ errors.first('email') }}</span>
                                 </div>
@@ -44,13 +60,12 @@
 
                                 <div class="form-group">
                                     <button type="submit" class="btn bg-pink-400 btn-block">
-                                        Sign in <i class="icon-circle-right2 position-right"></i>
+                                        Signup <i class="icon-circle-right2 position-right"></i>
                                     </button>
                                 </div>
 
                                 <div>
-                                    <router-link to="/signup">Signup</router-link>
-                                    <router-link to="/forgot-password" class="pull-right">Forgot password?</router-link>
+                                    <router-link to="/login">Back to Login</router-link>
                                 </div>
                             </div>
                         </form>
@@ -71,6 +86,8 @@
         data () {
             return {
                 user: {
+                    first_name: '',
+                    last_name: '',
                     email: '',
                     password: '',
                 },
@@ -79,32 +96,23 @@
             }
         },
         methods: {
-            login() {
+            signup() {
 
                 this.$validator.validateAll().
                         then((result) => {
                     if(result) {
-                        this.$auth.login({
-                            params: {
-                                email: this.user.email,
-                                password: this.user.password
-                            },
-                            success: function(res) {
-                                this.user = {};
-                            },
-                            error: function(err) {
-                                this.showDismissibleAlert = true;
-                                this.serverErrors = [];
-                                if (err.response.data.error === 'Unauthorized') {
-                                    this.serverErrors.push(err.response.data.msg);
-                                } else {
-                                    this.handleErrors(err.response.data.errors);
-                                }
-
-                            },
-                            rememberMe: true,
-                            fetchUser: true,
-                            redirect: '/dashboard'
+                        this.axios.post('register', this.user)
+                                .then(res => {
+                            this.$toastr.success(res.data.msg, 'Success!');
+                            this.$router.push('/login');
+                        }).catch(err => {
+                            this.showDismissibleAlert = true;
+                            this.serverErrors = [];
+                            if (err.response.data.error === 'Unauthorized') {
+                                this.serverErrors.push(err.response.data.msg);
+                            } else {
+                                this.handleErrors(err.response.data.errors);
+                            }
                         })
                     }
                 });

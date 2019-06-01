@@ -1,6 +1,7 @@
 import VueRouter from 'vue-router';
 
 import Login from './components/Login';
+import Signup from './components/Signup';
 import Dashboard from './components/Dashboard';
 import DocumentCreate from './components/Documents/Create';
 
@@ -13,6 +14,10 @@ let routes = [
         path: '/login',
         name: 'login',
         component: Login
+    }, {
+        path: '/signup',
+        name: 'signup',
+        component: Signup
     }
     , {
         path: '/dashboard',
