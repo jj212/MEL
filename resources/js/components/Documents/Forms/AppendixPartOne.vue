@@ -4,25 +4,25 @@
 
             <div class="form-group has-feedback has-feedback-left">
                 <label for="appendix_one">Appendix 1: Program logic</label>
-                <ckeditor name="appendix_one" :editor="editor" v-model="document.approach.appendix_one" :config="editorConfig" v-validate="'required|min:10'" placeholder="Monitoring and Continuous Improvement text here ..." id="appendix_one"></ckeditor>
+                <ckeditor name="appendix_one" :editor="editor" v-model="document.approach.appendix_one" :config="editorConfig" placeholder="Monitoring and Continuous Improvement text here ..." id="appendix_one"></ckeditor>
                 <span v-if="errors.has('appendix_one')" class="text-danger">{{ errors.first('appendix_one') }}</span>
             </div>
 
             <div class="form-group has-feedback has-feedback-left">
                 <label for="appendix_two">Appendix 2: Theory of change</label>
-                <ckeditor name="appendix_two" :editor="editor" v-model="document.approach.appendix_two" :config="editorConfig" v-validate="'required|min:10'" placeholder="Monitoring and Continuous Improvement text here ..." id="appendix_two"></ckeditor>
+                <ckeditor name="appendix_two" :editor="editor" v-model="document.approach.appendix_two" :config="editorConfig" placeholder="Monitoring and Continuous Improvement text here ..." id="appendix_two"></ckeditor>
                 <span v-if="errors.has('appendix_two')" class="text-danger">{{ errors.first('appendix_two') }}</span>
             </div>
 
             <div class="form-group has-feedback has-feedback-left">
                 <label for="appendix_three">Appendix 3: Rubric for Business Resilience</label>
-                <ckeditor name="appendix_three" :editor="editor" v-model="document.approach.appendix_three" :config="editorConfig" v-validate="'required|min:10'" placeholder="Monitoring and Continuous Improvement text here ..." id="appendix_three"></ckeditor>
+                <ckeditor name="appendix_three" :editor="editor" v-model="document.approach.appendix_three" :config="editorConfig" placeholder="Monitoring and Continuous Improvement text here ..." id="appendix_three"></ckeditor>
                 <span v-if="errors.has('appendix_three')" class="text-danger">{{ errors.first('appendix_three') }}</span>
             </div>
 
             <div class="form-group has-feedback has-feedback-left">
                 <label for="appendix_four">Appendix 4: Prospective timeline</label>
-                <ckeditor name="appendix_four" :editor="editor" v-model="document.approach.appendix_four" :config="editorConfig" v-validate="'required|min:10'" placeholder="Monitoring and Continuous Improvement text here ..." id="appendix_four"></ckeditor>
+                <ckeditor name="appendix_four" :editor="editor" v-model="document.approach.appendix_four" :config="editorConfig" placeholder="Monitoring and Continuous Improvement text here ..." id="appendix_four"></ckeditor>
                 <span v-if="errors.has('appendix_four')" class="text-danger">{{ errors.first('appendix_four') }}</span>
             </div>
 

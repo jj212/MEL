@@ -4,7 +4,7 @@
 
             <div class="form-group has-feedback has-feedback-left">
                 <label for="keyevolution">Key Evolution Questions</label>
-                <ckeditor name="keyevolution" :editor="editor" v-model="document.approach.key_evolution_questions" :config="editorConfig" v-validate="'required|min:10'" placeholder="Key Evolution Questions text here ..." id="keyevolution"></ckeditor>
+                <ckeditor name="keyevolution" :editor="editor" v-model="document.approach.key_evolution_questions" :config="editorConfig" placeholder="Key Evolution Questions text here ..." id="keyevolution"></ckeditor>
                 <span v-if="errors.has('keyevolution')" class="text-danger">{{ errors.first('keyevolution') }}</span>
             </div>
 
@@ -38,7 +38,7 @@
 
             <div class="form-group has-feedback has-feedback-left">
                 <label for="operational_steps">How the operational components of the MERI framework fit together</label>
-                <ckeditor name="operational_steps" :editor="editor" v-model="document.approach.operational_steps" :config="editorConfig" v-validate="'required|min:10'" placeholder="Approach scope audience text here ..." id="operational_steps"></ckeditor>
+                <ckeditor name="operational_steps" :editor="editor" v-model="document.approach.operational_steps" :config="editorConfig" placeholder="Approach scope audience text here ..." id="operational_steps"></ckeditor>
                 <span v-if="errors.has('operational_steps')" class="text-danger">{{ errors.first('operational_steps') }}</span>
             </div>
 

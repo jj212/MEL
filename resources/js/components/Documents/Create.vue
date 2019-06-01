@@ -104,6 +104,7 @@
                             ]
                         }],
                         ethical_considerations: '',
+                        limitation: '',
                         key_evolution_questions: '',
                         key_evolution_tbl: [
                             {criteria:'Effectiveness', question:'', subQuestion:''},

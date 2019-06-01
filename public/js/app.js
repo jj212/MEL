@@ -3190,6 +3190,7 @@ __webpack_require__.r(__webpack_exports__);
             }]
           }],
           ethical_considerations: '',
+          limitation: '',
           key_evolution_questions: '',
           key_evolution_tbl: [{
             criteria: 'Effectiveness',
@@ -3472,8 +3473,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ckeditor/ckeditor5-build-classic */ "./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js");
 /* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__);
-//
-//
 //
 //
 //
@@ -79614,14 +79613,6 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "appendix_one",
                 editor: _vm.editor,
@@ -79657,14 +79648,6 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "appendix_two",
                 editor: _vm.editor,
@@ -79700,14 +79683,6 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "appendix_three",
                 editor: _vm.editor,
@@ -79743,14 +79718,6 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "appendix_four",
                 editor: _vm.editor,
@@ -79842,14 +79809,6 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "appendix_five",
                 editor: _vm.editor,
@@ -79885,14 +79844,6 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "appendix_six",
                 editor: _vm.editor,
@@ -79928,14 +79879,6 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "appendix_seven",
                 editor: _vm.editor,
@@ -79971,14 +79914,6 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "appendix_eight",
                 editor: _vm.editor,
@@ -80068,14 +80003,6 @@ var render = function() {
             _c("label", { attrs: { for: "title" } }, [_vm._v("Approach")]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "approach",
                 editor: _vm.editor,
@@ -80110,14 +80037,6 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "principles",
                 editor: _vm.editor,
@@ -80260,14 +80179,6 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "ethicalconsideration",
                 editor: _vm.editor,
@@ -80302,14 +80213,6 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "limitation",
                 editor: _vm.editor,
@@ -80400,14 +80303,6 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "keyevolution",
                 editor: _vm.editor,
@@ -80516,14 +80411,6 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "operational_steps",
                 editor: _vm.editor,
@@ -80629,14 +80516,6 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "m_improvement",
                 editor: _vm.editor,
@@ -80672,14 +80551,6 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "evaluation_plan",
                 editor: _vm.editor,
@@ -80712,14 +80583,6 @@ var render = function() {
             _c("label", { attrs: { for: "reporting" } }, [_vm._v("Reporting")]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "reporting",
                 editor: _vm.editor,
@@ -80810,14 +80673,6 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("ckeditor", {
-              directives: [
-                {
-                  name: "validate",
-                  rawName: "v-validate",
-                  value: "required|min:10",
-                  expression: "'required|min:10'"
-                }
-              ],
               attrs: {
                 name: "scopeaudience",
                 editor: _vm.editor,
@@ -80870,12 +80725,6 @@ var render = function() {
                           rawName: "v-model",
                           value: tbl.name,
                           expression: "tbl.name"
-                        },
-                        {
-                          name: "validate",
-                          rawName: "v-validate",
-                          value: "required",
-                          expression: "'required'"
                         }
                       ],
                       staticClass: "form-control",
@@ -80935,14 +80784,6 @@ var render = function() {
                               "td",
                               [
                                 _c("ckeditor", {
-                                  directives: [
-                                    {
-                                      name: "validate",
-                                      rawName: "v-validate",
-                                      value: "required|min:10",
-                                      expression: "'required|min:10'"
-                                    }
-                                  ],
                                   attrs: {
                                     name: "need",
                                     editor: _vm.editor,

@@ -4,19 +4,19 @@
 
             <div class="form-group has-feedback has-feedback-left">
                 <label for="m_improvement">Monitoring and Continuous Improvement</label>
-                <ckeditor name="m_improvement" :editor="editor" v-model="document.approach.monitoring_improvement" :config="editorConfig" v-validate="'required|min:10'" placeholder="Monitoring and Continuous Improvement text here ..." id="m_improvement"></ckeditor>
+                <ckeditor name="m_improvement" :editor="editor" v-model="document.approach.monitoring_improvement" :config="editorConfig" placeholder="Monitoring and Continuous Improvement text here ..." id="m_improvement"></ckeditor>
                 <span v-if="errors.has('m_improvement')" class="text-danger">{{ errors.first('m_improvement') }}</span>
             </div>
 
             <div class="form-group has-feedback has-feedback-left">
                 <label for="evaluation_plan">Evaluation Plan</label>
-                <ckeditor name="evaluation_plan" :editor="editor" v-model="document.approach.evaluation_plan" :config="editorConfig" v-validate="'required|min:10'" placeholder="Evaluation Plan text here ..." id="evaluation_plan"></ckeditor>
+                <ckeditor name="evaluation_plan" :editor="editor" v-model="document.approach.evaluation_plan" :config="editorConfig" placeholder="Evaluation Plan text here ..." id="evaluation_plan"></ckeditor>
                 <span v-if="errors.has('evaluation_plan')" class="text-danger">{{ errors.first('evaluation_plan') }}</span>
             </div>
 
             <div class="form-group has-feedback has-feedback-left">
                 <label for="reporting">Reporting</label>
-                <ckeditor name="reporting" :editor="editor" v-model="document.approach.reporting" :config="editorConfig" v-validate="'required|min:10'" placeholder="Reporting text here ..." id="reporting"></ckeditor>
+                <ckeditor name="reporting" :editor="editor" v-model="document.approach.reporting" :config="editorConfig" placeholder="Reporting text here ..." id="reporting"></ckeditor>
                 <span v-if="errors.has('reporting')" class="text-danger">{{ errors.first('reporting') }}</span>
             </div>
 

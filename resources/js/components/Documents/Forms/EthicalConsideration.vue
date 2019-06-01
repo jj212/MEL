@@ -4,13 +4,13 @@
 
             <div class="form-group has-feedback has-feedback-left">
                 <label for="ethicalconsideration">Ethical Considerations</label>
-                <ckeditor name="ethicalconsideration" :editor="editor" v-model="document.approach.ethical_considerations" :config="editorConfig" v-validate="'required|min:10'" placeholder="Approach scope audience text here ..." id="ethicalconsideration"></ckeditor>
+                <ckeditor name="ethicalconsideration" :editor="editor" v-model="document.approach.ethical_considerations" :config="editorConfig" placeholder="Approach scope audience text here ..." id="ethicalconsideration"></ckeditor>
                 <span v-if="errors.has('ethicalconsideration')" class="text-danger">{{ errors.first('ethicalconsideration') }}</span>
             </div>
 
             <div class="form-group has-feedback has-feedback-left">
                 <label for="limitation">Limitations</label>
-                <ckeditor name="limitation" :editor="editor" v-model="document.approach.limitation" :config="editorConfig" v-validate="'required|min:10'" placeholder="Approach limitation text here ..." id="limitation"></ckeditor>
+                <ckeditor name="limitation" :editor="editor" v-model="document.approach.limitation" :config="editorConfig" placeholder="Approach limitation text here ..." id="limitation"></ckeditor>
                 <span v-if="errors.has('limitation')" class="text-danger">{{ errors.first('limitation') }}</span>
             </div>
 

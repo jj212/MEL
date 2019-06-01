@@ -4,7 +4,7 @@
 
             <div class="form-group has-feedback has-feedback-left">
                 <label for="principles">Approach Principles</label>
-                <ckeditor name="principles" :editor="editor" v-model="document.approach.principles" :config="editorConfig" v-validate="'required|min:10'" placeholder="Approach principles text here ..." id="principles"></ckeditor>
+                <ckeditor name="principles" :editor="editor" v-model="document.approach.principles" :config="editorConfig" placeholder="Approach principles text here ..." id="principles"></ckeditor>
                 <!--<textarea name="principles" v-model="document.approach.principles" class="form-control" v-validate="'required|min:10'" placeholder="Approach principles text here ..." id="principles"></textarea>-->
                 <span v-if="errors.has('principles')" class="text-danger">{{ errors.first('principles') }}</span>
             </div>

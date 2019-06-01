@@ -4,8 +4,8 @@
 
             <div class="form-group has-feedback has-feedback-left">
                 <label for="limitation">Limitations</label>
-                <ckeditor name="limitation" :editor="editor" v-model="document.approach.limitation" :config="editorConfig" v-validate="'required|min:10'" placeholder="Approach scope audience text here ..." id="limitation"></ckeditor>
-                <!--<textarea name="principles" v-model="document.approach.principles" class="form-control" v-validate="'required|min:10'" placeholder="Approach principles text here ..." id="principles"></textarea>-->
+                <ckeditor name="limitation" :editor="editor" v-model="document.approach.limitation" :config="editorConfig" placeholder="Approach scope audience text here ..." id="limitation"></ckeditor>
+                <!--<textarea name="principles" v-model="document.approach.principles" class="form-control" placeholder="Approach principles text here ..." id="principles"></textarea>-->
                 <span v-if="errors.has('limitation')" class="text-danger">{{ errors.first('limitation') }}</span>
             </div>
 
