@@ -31,6 +31,7 @@ Route::group(['middleware' => 'api', 'namespace'=>'Api'], function ($router) {
 
 
         Route::post('documents', 'DocumentsController@store');
+        Route::get('documents', 'DocumentsController@index');
     });
 
 });

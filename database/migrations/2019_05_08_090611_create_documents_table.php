@@ -19,6 +19,24 @@ class CreateDocumentsTable extends Migration
             $table->string('path')->nullable();
             $table->mediumText('approach')->nullable();
             $table->mediumText('approach_principles')->nullable();
+            $table->mediumText('scope_audience')->nullable();
+            $table->mediumText('scope_audience_tbl')->nullable();
+            $table->mediumText('ethical_considerations')->nullable();
+            $table->mediumText('limitation')->nullable();
+            $table->mediumText('key_evolution_questions')->nullable();
+            $table->mediumText('key_evolution_tbl')->nullable();
+            $table->mediumText('operational_steps')->nullable();
+            $table->mediumText('monitoring_improvement')->nullable();
+            $table->mediumText('evaluation_plan')->nullable();
+            $table->mediumText('reporting')->nullable();
+            $table->mediumText('appendix_one')->nullable();
+            $table->mediumText('appendix_two')->nullable();
+            $table->mediumText('appendix_three')->nullable();
+            $table->mediumText('appendix_four')->nullable();
+            $table->mediumText('appendix_five')->nullable();
+            $table->mediumText('appendix_six')->nullable();
+            $table->mediumText('appendix_seven')->nullable();
+            $table->mediumText('appendix_eight')->nullable();
             $table->timestamps();
         });
     }

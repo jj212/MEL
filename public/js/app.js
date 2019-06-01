@@ -3055,14 +3055,53 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Dashboard',
   components: {
     PageHeader: _partials_PageHeader_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
+  data: function data() {
+    return {
+      documents: []
+    };
+  },
+  methods: {
+    getDocuments: function getDocuments() {
+      var _this = this;
+
+      this.axios.get('documents').then(function (res) {
+        _this.documents = res.data.documents;
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    }
+  },
   mounted: function mounted() {
     console.log('Dashboard mounted.');
+  },
+  created: function created() {
+    this.getDocuments();
   }
 });
 
@@ -79376,36 +79415,91 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("Page-Header"), _vm._v(" "), _vm._m(0)], 1)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "page-container" }, [
-      _c("div", { staticClass: "page-content" }, [
-        _c("div", { staticClass: "content-wrapper" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-12" }, [
-              _c("div", { staticClass: "panel panel-flat" }, [
-                _c("div", { staticClass: "panel-heading" }, [
-                  _c("h6", { staticClass: "panel-title" }, [
-                    _vm._v("Marketing campaigns")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "panel-body" }, [
-                  _c("p", [
-                    _vm._v(
-                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-                    )
+  return _c(
+    "div",
+    [
+      _c("Page-Header"),
+      _vm._v(" "),
+      _c("div", { staticClass: "page-container" }, [
+        _c("div", { staticClass: "page-content" }, [
+          _c("div", { staticClass: "content-wrapper" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-lg-12" }, [
+                _c("div", { staticClass: "panel panel-flat" }, [
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "panel-body" }, [
+                    _c("table", { staticClass: "table table-bordered" }, [
+                      _vm._m(1),
+                      _vm._v(" "),
+                      _c(
+                        "tbody",
+                        [
+                          _vm._l(_vm.documents, function(document) {
+                            return _c("tr", [
+                              _c("td", [_vm._v(_vm._s(document.path))]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v(_vm._s(document.created_at))]),
+                              _vm._v(" "),
+                              _c("td", [
+                                _c(
+                                  "a",
+                                  {
+                                    attrs: {
+                                      href: "/" + document.path,
+                                      download: ""
+                                    }
+                                  },
+                                  [_vm._v("Download")]
+                                )
+                              ])
+                            ])
+                          }),
+                          _vm._v(" "),
+                          _vm.documents.length == 0
+                            ? _c("tr", [
+                                _c("td", { attrs: { colspan: "3" } }, [
+                                  _vm._v("Documents not available")
+                                ])
+                              ])
+                            : _vm._e()
+                        ],
+                        2
+                      )
+                    ])
                   ])
                 ])
               ])
             ])
           ])
         ])
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "panel-heading" }, [
+      _c("h6", { staticClass: "panel-title" }, [
+        _vm._v("Latest Generated Documents")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Document")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Created At")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Action")])
       ])
     ])
   }

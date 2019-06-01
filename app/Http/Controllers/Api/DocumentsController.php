@@ -18,12 +18,38 @@ use Webklex\PDFMerger\Facades\PDFMergerFacade as PDFMerger;
 
 class DocumentsController extends Controller
 {
+    public function index()
+    {
+        $documents = Document::where('user_id', auth()->id())->select('id', 'user_id', 'path', 'created_at')->orderBy('id', 'desc')->limit(10)->get();
+
+        return response()->json(['documents'=> $documents], 201);
+    }
+
+
     public function store(Request $request)
     {
         $document = new Document();
         $document->user_id = auth()->id();
         $document->approach = $request->approach['approach'];
         $document->approach_principles = $request->approach['principles'];
+        $document->scope_audience = $request->approach['scope_audience'];
+        $document->scope_audience_tbl = json_encode($request->approach['scope_audience_tbl']);
+        $document->ethical_considerations = $request->approach['ethical_considerations'];
+        $document->limitation = $request->approach['limitation'];
+        $document->key_evolution_questions = $request->approach['key_evolution_questions'];
+        $document->key_evolution_tbl = json_encode($request->approach['key_evolution_tbl']);
+        $document->operational_steps = $request->approach['operational_steps'];
+        $document->monitoring_improvement = $request->approach['monitoring_improvement'];
+        $document->evaluation_plan = $request->approach['evaluation_plan'];
+        $document->reporting = $request->approach['reporting'];
+        $document->appendix_one = $request->approach['appendix_one'];
+        $document->appendix_two = $request->approach['appendix_two'];
+        $document->appendix_three = $request->approach['appendix_three'];
+        $document->appendix_four = $request->approach['appendix_four'];
+        $document->appendix_five = $request->approach['appendix_five'];
+        $document->appendix_six = $request->approach['appendix_six'];
+        $document->appendix_seven = $request->approach['appendix_seven'];
+        $document->appendix_eight = $request->approach['appendix_eight'];
         $document->path = $this->convertToWord($request->all());
 
         if(!$document->save()){

@@ -18,10 +18,30 @@
                             <!-- Marketing campaigns -->
                             <div class="panel panel-flat">
                                 <div class="panel-heading">
-                                    <h6 class="panel-title">Marketing campaigns</h6>
+                                    <h6 class="panel-title">Latest Generated Documents</h6>
                                 </div>
                                 <div class="panel-body">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>Document</th>
+                                            <th>Created At</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr v-for="document in documents">
+                                            <td>{{ document.path }}</td>
+                                            <td>{{ document.created_at }}</td>
+                                            <td>
+                                                <a :href="'/'+ document.path" download>Download</a>
+                                            </td>
+                                        </tr>
+                                        <tr v-if="documents.length == 0">
+                                            <td colspan="3">Documents not available</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                             <!-- /marketing campaigns -->
@@ -49,8 +69,26 @@
         components: {
             PageHeader
         },
+        data () {
+            return {
+                documents: []
+            }
+        },
+        methods: {
+            getDocuments() {
+                this.axios.get('documents')
+                        .then(res => {
+                   this.documents = res.data.documents;
+                }).catch(err => {
+                    console.log(err);
+                })
+            }
+        },
         mounted() {
-        console.log('Dashboard mounted.')
-    }
+            console.log('Dashboard mounted.')
+        },
+        created() {
+            this.getDocuments();
+        }
     }
 </script>
