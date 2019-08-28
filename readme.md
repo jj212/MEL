@@ -5,9 +5,11 @@
 * Clone the repo:
     -- `git clone {ssh/https}`
 
+* `cd M_AND_E`
+
 * `composer install`
 
-* Create the `.env` file and insert the essential data
+* Create the `.env` file from `.env.example` and insert the essential data
 
 * `php artisan key:generate`
 
