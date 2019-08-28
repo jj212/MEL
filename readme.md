@@ -5,7 +5,7 @@
 * Clone the repo:
     -- `git clone {ssh/https}`
 
-* `cd M_AND_E`
+* `cd m_and_e`
 
 * `composer install`
 
